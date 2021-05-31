@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/list.hpp
+memory
+-
+cmath
+-
+
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/main.cpp
+iostream
+-
+list
+-
+string
+-
+list.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/list.hpp
+
