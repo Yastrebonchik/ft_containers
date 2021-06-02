@@ -7,9 +7,7 @@
 #IncludeRegexTransform: 
 
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/list.hpp
-memory
--
-cmath
+limits
 -
 
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/main.cpp
