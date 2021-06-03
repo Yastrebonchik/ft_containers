@@ -6,7 +6,7 @@
 /*   By:  <kcedra>                                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/30 20:15:32 by kcedra            #+#    #+#             */
-/*   Updated: 2021/06/03 01:28:07 by                  ###   ########.fr       */
+/*   Updated: 2021/06/03 03:25:53 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@
 #include "list.hpp"
 
 int main() {
-	ft::list<int>	test;
-	std::list<int>  a1;
+	int 								i = 0;
+	ft::list<int>						test;
+	std::list<int>  					a1;
 	std::list<int>::iterator 			test1;
 	std::list<int>::iterator 			end1;
 	std::list<int>::reverse_iterator	test2;
 
+	a1.insert(a1.begin(), 10, 7);
 	//std::cout << "My list Allocator max size = : " << test.get_allocator().max_size() << std::endl;
 	//std::cout << "Normal list Allocator max size = : " << a1.get_allocator().max_size() << std::endl;
 	std::cout << "My list tests ----------------------------------------" << std::endl;
@@ -67,10 +69,17 @@ int main() {
 	std::cout << "Print container len: " << test.size() << std::endl;
 	std::cout << "After testing iterators" << std::endl;
 	std::cout << "Print container len: " << test.size() << std::endl;
-//	while (!test.empty()){
-//		std::cout << "Front: " << test.front() << std::endl;
-//		test.pop_front();
-//	}
+	std::cout << "Erase tests --------------------------" << std::endl;
+	ft::list<int>::iterator iters = test.begin();
+	++iters;
+	iters++;
+	//test.erase(ites, test.end());
+	//test.insert(++iters, a1.begin(),a1.end());
+	//test.erase(++iters, test.end());
+	for (ft::list<int>::iterator it = test.begin(); it != test.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	//test.erase(ites);
+	std::cout << "Erase tests end ----------------------" << std::endl;
 	std::cout << "Clear tests --------------------------" << std::endl;
 	test.push_back(30);
 	test.push_back(35);
@@ -81,10 +90,19 @@ int main() {
 	test.clear();
 	std::cout << "Print container len: " << test.size() << std::endl;
 	std::cout << "Clear tests end ----------------------" << std::endl;
+	std::cout << "String list tests --------------------" << std::endl;
+	std::cout << "Fill with val constructor" << std::endl;
+	ft::list<std::string>	strlist(10, "Aboba");
+	for (ft::list<std::string>::reverse_iterator it = strlist.rbegin(); it != strlist.rend(); ++it){
+		if (i++ % 2 == 0)
+			*it = "KekV";
+		std::cout << "Value = " << *it << std::endl;
+	}
+	std::cout << "String list tests end ----------------" << std::endl;
 	std::cout << "------------------------------------------------------" << std::endl;
 //	a1.push_back(2);
 //	a1.push_back(3);
-	test1 = a1.begin();
+//	test1 = a1.begin();
 //	std::cout << a1.size() << std::endl;
 //	std::cout << *test1 << std::endl;
 //	end1 = --a1.begin();
