@@ -40,13 +40,10 @@ namespace ft {
 		};
 		template <class InputIterator>
 		list (InputIterator first, InputIterator last) : _Mnode(new node()), _len(0) {
-			this->insert(first, last);
+			this->assign(first, last);
 		};
 		list (const list& x) : _Mnode(new node()), _len(0) {
-			const_iterator	it = x.begin();
-			const_iterator	ite = x.end();
-
-			this->template assign(it, ite);
+			this->assign(x.begin(), x.end());
 		};
 		~list(){
 			this->clear();
@@ -55,9 +52,9 @@ namespace ft {
 
 		/* Forward iterator class */
 		class iterator{
-		private:
-			node	*_current;
 		public:
+			node	*_current;
+
 			iterator() : _current(nullptr) {
 			};
 			iterator(node *Node) : _current(Node) {
@@ -112,17 +109,13 @@ namespace ft {
 				return (*this);
 			};
 
-			//friend iterator list<T>::begin();
-			//friend iterator list<T>::end();
-			friend iterator	list<T>::erase(iterator position);
-			friend iterator list<T>::insert(iterator position, const T& val);
 		};
 
 		/* Const Forward iterator class */
 		class const_iterator{
-		private:
-			node	*_current;
 		public:
+			node	*_current;
+
 			const_iterator() : _current(nullptr) {
 			};
 			const_iterator(node *Node) : _current(Node){
@@ -177,15 +170,13 @@ namespace ft {
 				return (*this);
 			};
 
-			//friend const_iterator	list<T>::begin() const;
-			//friend const_iterator	list<T>::end() const;
 		};
 
 		/* Reverse iterator class */
 		class reverse_iterator{
-		private:
-			node	*_current;
 		public:
+			node	*_current;
+
 			reverse_iterator() : _current(nullptr) {
 			};
 			reverse_iterator(const reverse_iterator &src) : _current(src._current){
@@ -249,7 +240,7 @@ namespace ft {
 			else
 				return(iterator(this->_Mnode));
 		};
-		const_iterator	begin(void) const{
+		const_iterator	begin(void) const {
 			if (_len != 0)
 				return(const_iterator(this->_Mnode->next));
 			else
@@ -301,7 +292,7 @@ namespace ft {
 
 		/* Modifiers */
 		template <class InputIterator>
-		void assign (InputIterator first, InputIterator last){
+		void assign (InputIterator first, InputIterator last) {
 			this->clear();
 			this->insert(this->begin(), first, last);
 		};
@@ -309,7 +300,7 @@ namespace ft {
 			this->clear();
 			this->insert(this->begin(), n ,val);
 		};
-		void 		push_front(const T& val){
+		void 		push_front(const T& val) {
 			node*	newNode = new node(val);
 
 			newNode->prev = this->_Mnode;
@@ -324,7 +315,7 @@ namespace ft {
 				this->_Mnode->prev = newNode;
 			this->_len++;
 		};
-		void 		pop_front(){
+		void 		pop_front() {
 			node*	address = this->_Mnode->next;
 
 			this->_Mnode->next = address->next;
@@ -336,7 +327,7 @@ namespace ft {
 				this->_Mnode->prev = nullptr;
 			}
 		};
-		void 		push_back(const T& val){
+		void 		push_back(const T& val) {
 			node*	newNode = new node(val);
 
 			newNode->next = this->_Mnode;
@@ -351,7 +342,7 @@ namespace ft {
 				this->_Mnode->next = newNode;
 			this->_len++;
 		};
-		void 		pop_back(){
+		void 		pop_back() {
 			node*	address = this->_Mnode->prev;
 
 			this->_Mnode->prev = address->prev;
@@ -410,15 +401,121 @@ namespace ft {
 			this->_len--;
 			return (ret);
 		};
-		iterator	erase(iterator first, iterator last){
+		iterator	erase(iterator first, iterator last) {
 			while (first != last)
 				first = this->erase(first);
 			return (first);
 		};
-		void 		clear(){
+		void resize (size_t n, T val = T()) {
+			if (n > this->size()){
+				while (n > this->size())
+					this->push_back(val);
+			}
+			else{
+				while (n < this->size())
+					this->pop_back();
+			}
+		};
+		void 		clear() {
 			while (!this->empty())
 				this->pop_front();
 		}
+
+		/* Operations */
+		void splice (iterator position, list& x) {
+			this->insert(position, x.begin(), x.end());
+			x.clear();
+		};
+		void remove (const T& val) {
+			list<T>::iterator it = this->begin();
+			while (it != this->end()) {
+				if (*it == val)
+					it = this->erase(it);
+				else
+					it++;
+			}
+		};
+		template <class Predicate>
+		void remove_if (Predicate pred) {
+			list<T>::iterator it = this->begin();
+			while (it != this->end()) {
+				if (pred(*it))
+					it = this->erase(it);
+				else
+					it++;
+			}
+		};
+		void unique() {
+			list<T>::iterator it = this->begin();
+			list<T>::iterator ite = this->end();
+			list<T>::iterator cmp;
+
+			ite--;
+			while (it != ite) {
+				cmp = it++;
+				if (*it == *cmp)
+					it = this->erase(it);
+				else
+					it++;
+			}
+		};
+		// Где-то течет эта функция.
+		template <class BinaryPredicate>
+		void unique (BinaryPredicate binary_pred) {
+			list<T>::iterator it = this->begin();
+			list<T>::iterator ite = this->end();
+			list<T>::iterator cmp;
+
+			while (it != ite) {
+				it++;
+				cmp._current = it._current->prev;
+				if (binary_pred(*it, *cmp))
+					it = this->erase(it);
+				else
+					it++;
+			}
+		};
+		void sort() {
+			size_t		i = 0;
+			iterator	it;
+			iterator	ite = this->end();
+			T			bubble;
+
+			while (i < this->_len) {
+				it = this->begin();
+				ite--;
+				while (it != ite) {
+					if (it._current->value > it._current->next->value) {
+						bubble = it._current->value;
+						it._current->value = it._current->next->value;
+						it._current->next->value = bubble;
+					}
+					it++;
+				}
+				i++;
+			}
+		};
+		template <class Compare>
+		void sort (Compare comp) {
+			size_t		i = 0;
+			iterator	it;
+			iterator	ite = this->end();
+			T			bubble;
+
+			while (i < this->_len) {
+				it = this->begin();
+				ite--;
+				while (it != ite) {
+					if (!comp(it._current->value, it._current->next->value)) {
+						bubble = it._current->value;
+						it._current->value = it._current->next->value;
+						it._current->next->value = bubble;
+					}
+					it++;
+				}
+				i++;
+			}
+		};
 	};
 }
 #endif //FT_CONTAINERS_LIST_H

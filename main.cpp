@@ -12,11 +12,39 @@
 
 #include <iostream>
 #include <list>
+#include <cmath>
 #include <string>
 #include "list.hpp"
 
+bool single_digit (const int& value) { return (value<10); }
+
+// a predicate implemented as a class:
+struct is_odd {
+	bool operator() (const int& value) { return (value%2)==1; }
+};
+
+bool compare_nocase (const std::string& first, const std::string& second)
+{
+	unsigned int i=0;
+	while ( (i<first.length()) && (i<second.length()) )
+	{
+		if (tolower(first[i])<tolower(second[i])) return true;
+		else if (tolower(first[i])>tolower(second[i])) return false;
+		++i;
+	}
+	return ( first.length() < second.length() );
+}
+
+bool same_integral_part (double first, double second)
+{ return ( int(first)==int(second) ); }
+
+// a binary predicate implemented as a class:
+struct is_near {
+	bool operator() (double first, double second)
+	{ return (fabs(first-second)<5.0); }
+};
+
 int main() {
-	int 								i = 0;
 	ft::list<int>						test;
 	std::list<int>  					a1;
 	std::list<int>::iterator 			test1;
@@ -25,6 +53,8 @@ int main() {
 	std::list<int>::reverse_iterator	test2;
 
 	a1.insert(a1.begin(), 10, 7);
+	//std::list<int>::iterator 			cpyass = a1.begin();
+	//cpyass += 5;
 	for (std::list<int>::const_iterator it = a1.begin(); it != a1.end(); ++it)
 		std::cout << "Value = " << *it << std::endl;
 	std::cout << "My list tests ----------------------------------------" << std::endl;
@@ -110,7 +140,11 @@ int main() {
 	std::cout << "Copy constructor tests ---------------" << std::endl;
 	const ft::list<int>	copytest(test);
 	//con1 = a1.begin();
-	//ft::list<int>::const_iterator it = test.begin();
+	//ft::list<int>::iterator ittest = test.begin();
+	//ft::list<int>::iterator	assiter;
+//	//std::list<int>::const_iterator consttestit = a1.cbegin();
+//	for (std::list<int>::const_iterator it = a1.begin(); it != a1.end(); ++it)
+//		std::cout << "Value = " << *it << std::endl;
 	for (ft::list<int>::const_iterator itc = copytest.begin(); itc != copytest.end(); ++itc)
 		std::cout << "Value = " << *itc << std::endl;
 	std::cout << "Copy constructor tests end -----------" << std::endl;
@@ -118,13 +152,138 @@ int main() {
 
 	std::cout << "String list tests --------------------" << std::endl;
 	std::cout << "Fill with val constructor" << std::endl;
-	ft::list<std::string>	strlist(10, "Aboba");
+	ft::list<std::string>	strlist;
+	strlist.push_back("one");
+	strlist.push_back("two");
+	strlist.push_back("Three");
+	strlist.sort();
+
+	std::cout << "mylist contains:";
+	for (ft::list<std::string>::iterator it=strlist.begin(); it!=strlist.end(); ++it)
+		std::cout << ' ' << *it;
+	std::cout << '\n';
+
+	strlist.sort(compare_nocase);
+
+	std::cout << "mylist contains:";
+	for (ft::list<std::string>::iterator it=strlist.begin(); it!=strlist.end(); ++it)
+		std::cout << ' ' << *it;
+	std::cout << '\n';
+//	ft::list<std::string>	strlist(10, "aboba");
+//	int 								i = 0;
+//	for (ft::list<std::string>::reverse_iterator it = strlist.rbegin(); it != strlist.rend(); ++it){
+//		if (i++ % 2 == 0)
+//			*it = "KekV";
+//		std::cout << "Value = " << *it << std::endl;
+//	}
+	std::cout << "After compare-nocase" << std::endl;
+	strlist.sort(compare_nocase);
 	for (ft::list<std::string>::reverse_iterator it = strlist.rbegin(); it != strlist.rend(); ++it){
-		if (i++ % 2 == 0)
-			*it = "KekV";
 		std::cout << "Value = " << *it << std::endl;
 	}
 	std::cout << "String list tests end ----------------" << std::endl;
+
+
+	std::cout << "Resize tests -------------------------" << std::endl;
+	std::cout << "Print container len: " << test.size() << std::endl;
+	test.resize(12, -14343124);
+	std::cout << "Resizing to value 12" << std::endl;
+	std::cout << "Print container len: " << test.size() << std::endl;
+	for (ft::list<int>::iterator it = test.begin(); it != test.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	test.resize(3);
+	std::cout << "Resizing to value 3" << std::endl;
+	std::cout << "Print container len: " << test.size() << std::endl;
+	for (ft::list<int>::iterator it = test.begin(); it != test.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	std::cout << "Resize tests end ---------------------" << std::endl;
+
+
+	std::cout << "Remove tests -------------------------" << std::endl;
+	test.push_back(12);
+	test.push_back(7);
+	test.push_back(41234213);
+	test.push_back(7);
+	test.push_back(31312);
+	test.push_front(1);
+	std::cout << "Print container len: " << test.size() << std::endl;
+	for (ft::list<int>::iterator it = test.begin(); it != test.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	test.remove(7);
+	std::cout << "Removing value 7" << std::endl;
+	std::cout << "Print container len: " << test.size() << std::endl;
+	for (ft::list<int>::iterator it = test.begin(); it != test.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	std::cout << "Remove tests end ---------------------" << std::endl;
+
+
+	std::cout << "Remove if tests ----------------------" << std::endl;
+	test.push_back(1);
+	test.push_back(2);
+	test.push_back(3);
+	test.push_back(4);
+	test.push_back(5);
+	test.push_back(6);
+	std::cout << "Print container len: " << test.size() << std::endl;
+	for (ft::list<int>::iterator it = test.begin(); it != test.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	test.remove_if(single_digit);
+	test.remove_if(is_odd());
+	std::cout << "Removing 1 digit numbers and odd numbers" << std::endl;
+	std::cout << "Print container len: " << test.size() << std::endl;
+	for (ft::list<int>::iterator it = test.begin(); it != test.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	std::cout << "Remove if tests end ------------------" << std::endl;
+
+
+	std::cout << "Sort tests ---------------------------" << std::endl;
+	test.push_back(1);
+	test.push_back(2);
+	test.push_back(3);
+	test.push_front(4);
+	test.push_front(5);
+	test.push_front(6);
+	test.push_back(3);
+	test.push_back(3);
+	test.push_back(3);
+	std::cout << "Print container len: " << test.size() << std::endl;
+	for (ft::list<int>::iterator it = test.begin(); it != test.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	std::cout << "After sort" << std::endl;
+	test.sort();
+	std::cout << "Print container len: " << test.size() << std::endl;
+	for (ft::list<int>::iterator it = test.begin(); it != test.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+
+	std::cout << "Test unique function " << std::endl;
+	test.unique();
+	for (ft::list<int>::iterator it = test.begin(); it != test.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	std::cout << "Sort tests end -----------------------" << std::endl;
+
+
+	std::cout << "Unique tests -------------------------" << std::endl;
+	double mydoubles[]={ 12.15,  2.72, 73.0,  12.77,  3.14,
+						 12.77, 73.35, 72.25, 15.3,  72.25 };
+	ft::list<double> mylist (mydoubles,mydoubles+10);
+
+	mylist.sort();             //  2.72,  3.14, 12.15, 12.77, 12.77,
+	// 15.3,  72.25, 72.25, 73.0,  73.35
+
+	mylist.unique();           //  2.72,  3.14, 12.15, 12.77
+	// 15.3,  72.25, 73.0,  73.35
+
+	mylist.unique (same_integral_part);  //  2.72,  3.14, 12.15
+	// 15.3,  72.25, 73.0
+
+	mylist.unique (is_near());           //  2.72, 12.15, 72.25
+
+	std::cout << "mylist contains:";
+	for (ft::list<double>::iterator it = mylist.begin(); it != mylist.end(); ++it)
+		std::cout << ' ' << *it;
+	std::cout << '\n';
+	std::cout << "Unique tests end ---------------------" << std::endl;
+
 	std::cout << "------------------------------------------------------" << std::endl;
 //	a1.push_back(2);
 //	a1.push_back(3);
