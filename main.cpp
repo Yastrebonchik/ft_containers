@@ -44,6 +44,9 @@ struct is_near {
 	{ return (fabs(first-second)<5.0); }
 };
 
+bool mycomparison (double first, double second)
+{ return ( int(first)<int(second) ); }
+
 int main() {
 	ft::list<int>						test;
 	std::list<int>  					a1;
@@ -284,9 +287,113 @@ int main() {
 	std::cout << '\n';
 	std::cout << "Unique tests end ---------------------" << std::endl;
 
-	std::cout << "------------------------------------------------------" << std::endl;
+
+	std::cout << "Swap tests ---------------------------" << std::endl;
+	ft::list<int>	swaptest((size_t)5, 214213442);
+	std::cout << "Print swaptest len: " << swaptest.size() << std::endl;
+	for (ft::list<int>::iterator it = swaptest.begin(); it != swaptest.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	std::cout << "Print test len: " << test.size() << std::endl;
+	for (ft::list<int>::iterator it = test.begin(); it != test.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	std::cout << "Swap here " << std::endl;
+	swaptest.swap(test);
+	std::cout << "Print swaptest len: " << swaptest.size() << std::endl;
+	for (ft::list<int>::iterator it = swaptest.begin(); it != swaptest.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	std::cout << "Print test len: " << test.size() << std::endl;
+	for (ft::list<int>::iterator it = test.begin(); it != test.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	std::cout << "Swap tests end -----------------------" << std::endl;
+
+
+	std::cout << "Splice tests -------------------------" << std::endl;
+	ft::list<int>::iterator itspl = test.begin();
+	std::cout << "Print swaptest len: " << swaptest.size() << std::endl;
+	std::cout << "Print test len: " << test.size() << std::endl;
+	itspl++;
+	itspl++;
+	swaptest.splice(swaptest.end(), test, itspl, test.end());
+	std::cout << "Print swaptest len: " << swaptest.size() << std::endl;
+	std::cout << "Print test len: " << test.size() << std::endl;
+	for (ft::list<int>::iterator it = test.begin(); it != test.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	test.push_front(-312312);
+	swaptest.splice(swaptest.begin(), test, test.begin());
+	std::cout << "Print swaptest len: " << swaptest.size() << std::endl;
+	std::cout << "Print test len: " << test.size() << std::endl;
+	for (ft::list<int>::iterator it = swaptest.begin(); it != swaptest.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	std::cout << "Splice tests end ---------------------" << std::endl;
+
+
+	std::cout << "Reverse tests ------------------------" << std::endl;
+	for (ft::list<int>::iterator it = swaptest.begin(); it != swaptest.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	std::cout << "Reverse" << std::endl;
+	swaptest.reverse();
+	for (ft::list<int>::iterator it = swaptest.begin(); it != swaptest.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	std::cout << "Reverse tests end --------------------" << std::endl;
+
+	std::cout << "Merge tests --------------------------" << std::endl;
+
+	ft::list<double> firstmy, secondmy;
+
+	firstmy.push_back (3.1);
+	firstmy.push_back (2.2);
+	firstmy.push_back (2.9);
+
+	secondmy.push_back (3.7);
+	secondmy.push_back (7.1);
+	secondmy.push_back (1.4);
+
+	firstmy.sort();
+	secondmy.sort();
+
+	firstmy.merge(secondmy);
+	std::cout << "first contains:";
+	for (ft::list<double>::iterator it = firstmy.begin(); it != firstmy.end(); ++it)
+		std::cout << ' ' << *it;
+	std::cout << '\n';
+
+	secondmy.push_back (2.1);
+
+	firstmy.merge(secondmy, mycomparison);
+
+	std::cout << "first contains:";
+	for (ft::list<double>::iterator it = firstmy.begin(); it != firstmy.end(); ++it)
+		std::cout << ' ' << *it;
+	std::cout << '\n';
+
+	std::cout << "Merge tests end ----------------------" << std::endl;
+	std::cout << "My list tests end ------------------------------------" << std::endl;
 //	a1.push_back(2);
 //	a1.push_back(3);
+	std::list<double> first, second;
+
+	first.push_back (3.1);
+	first.push_back (2.2);
+	first.push_back (2.9);
+
+	second.push_back (3.7);
+	second.push_back (7.1);
+	second.push_back (1.4);
+
+	first.sort();
+	second.sort();
+
+	first.merge(second);
+
+	second.push_back (2.1);
+
+	first.merge(second, mycomparison);
+
+	std::cout << "first contains:";
+	for (std::list<double>::iterator it=first.begin(); it!=first.end(); ++it)
+		std::cout << ' ' << *it;
+	std::cout << '\n';
+
 	a1.clear();
 //	if (a1 == a1)
 	test1 = a1.begin();

@@ -50,6 +50,11 @@ namespace ft {
 			delete this->_Mnode;
 		};
 
+		list&	operator=(const list& x) {
+			this->assign(x.begin(), x.end());
+			return (*this);
+		};
+
 		/* Forward iterator class */
 		class iterator{
 		public:
@@ -311,7 +316,7 @@ namespace ft {
 				newNode->next->prev = newNode;
 			}
 			this->_Mnode->next = newNode;
-			if (this->_Mnode->prev == nullptr)
+			if (this->_len == 0)
 				this->_Mnode->prev = newNode;
 			this->_len++;
 		};
@@ -338,7 +343,7 @@ namespace ft {
 				newNode->prev->next = newNode;
 			}
 			this->_Mnode->prev = newNode;
-			if (this->_Mnode->next == nullptr)
+			if (this->_len == 0)
 				this->_Mnode->next = newNode;
 			this->_len++;
 		};
@@ -401,6 +406,17 @@ namespace ft {
 			this->_len--;
 			return (ret);
 		};
+		void swap (list& x){
+			size_t	nlen;
+			node	*nNode;
+
+			nlen = this->_len;
+			this->_len = x._len;
+			x._len = nlen;
+			nNode = this->_Mnode;
+			this->_Mnode = x._Mnode;
+			x._Mnode = nNode;
+		};
 		iterator	erase(iterator first, iterator last) {
 			while (first != last)
 				first = this->erase(first);
@@ -423,8 +439,28 @@ namespace ft {
 
 		/* Operations */
 		void splice (iterator position, list& x) {
-			this->insert(position, x.begin(), x.end());
-			x.clear();
+			this->splice(position, x, x.begin(), x.end());
+		};
+		void splice (iterator position, list& x, iterator i) {
+			iterator	first = i;
+			i++;
+			this->splice(position, x, first, i);
+		};
+		void splice (iterator position, list& x, iterator first, iterator last) {
+			list<T>::iterator	it = first;
+			size_t				len = 0;
+
+			while (it++ != last)
+				len++;
+			first._current->prev->next = last._current;
+			last--;
+			last._current->next->prev = first._current->prev;
+			position._current->prev->next = first._current;
+			first._current->prev = position._current->prev;
+			last._current->next = position._current;
+			position._current->prev = last._current;
+			this->_len += len;
+			x._len -= len;
 		};
 		void remove (const T& val) {
 			list<T>::iterator it = this->begin();
@@ -475,6 +511,31 @@ namespace ft {
 					it++;
 			}
 		};
+		void merge (list& x){
+			list<T>::iterator it = this->begin();
+			list<T>::iterator ite = this->end();
+
+			while (it != ite) {
+				if (*it > x.front() && x._len > 0)
+					this->splice(it, x, x.begin());
+				it++;
+			}
+			if (x._len > 0)
+				this->splice(it, x);
+		};
+		template <class Compare>
+		void merge (list& x, Compare comp) {
+			list<T>::iterator it = this->begin();
+			list<T>::iterator ite = this->end();
+
+			while (it != ite) {
+				if (comp(x.front(), *it) && x._len > 0)
+					this->splice(it, x, x.begin());
+				it++;
+			}
+			if (x._len > 0)
+				this->splice(it, x);
+		};
 		void sort() {
 			size_t		i = 0;
 			iterator	it;
@@ -516,6 +577,34 @@ namespace ft {
 				i++;
 			}
 		};
+		void reverse() {
+			list<T>::iterator	it = this->begin();
+			list<T>::iterator	ite = this->end();
+			node	*nNode;
+
+			while (it != ite) {
+				nNode = it._current->next;
+				it._current->next = it._current->prev;
+				it._current->prev = nNode;
+				it._current = it._current->prev;
+			}
+			nNode = ite._current->next;
+			ite._current->next = ite._current->prev;
+			ite._current->prev = nNode;
+		};
+
+		//template<T> friend bool operator==(const list<T>& lhs, const list<T>& rhs);
 	};
+
+	/* Non member function overloads */
+	template <class T>
+	void swap (list<T>& x, list<T>& y) {
+		x.swap(y);
+	};
+//	template <class T>
+//	bool operator== (const list<T>& lhs, const list<T>& rhs) {
+//		list<T>::const_iterator	it = lhs.begin();
+//		list<T>::const_iterator	ite = rhs.end();
+//	};
 }
 #endif //FT_CONTAINERS_LIST_H
