@@ -14,6 +14,7 @@
 # define FT_CONTAINERS_LIST_H
 
 # include <limits>
+# include "algorithm.hpp"
 
 namespace ft {
 	template<class T>
@@ -283,16 +284,23 @@ namespace ft {
 		size_t		size() const{
 			return (this->_len);
 		};
+		// Need to find fix for this shit
 		size_t		max_size() const{
-			return (std::numeric_limits<T>::max());
+			return (std::numeric_limits<size_t>::max()/(sizeof(T)*4));
 		};
 
 		/* Element access */
 		T&			front(){
-			return (this->_Mnode->next->value);
+			if (this->_len > 1)
+				return (this->_Mnode->next->value);
+			else
+				return (this->_Mnode->value);
 		};
 		T&			back(){
-			return (this->_Mnode->prev->value);
+			if (this->_len > 1)
+				return (this->_Mnode->prev->value);
+			else
+				return (this->_Mnode->value);
 		};
 
 		/* Modifiers */
@@ -374,7 +382,7 @@ namespace ft {
 			}
 			else {
 				this->push_back(val);
-				ret._current = this->_Mnode->next;
+				ret._current = this->_Mnode;
 			}
 			return (ret);
 		};
@@ -486,13 +494,12 @@ namespace ft {
 			list<T>::iterator ite = this->end();
 			list<T>::iterator cmp;
 
-			ite--;
+			cmp = it++;
 			while (it != ite) {
-				cmp = it++;
 				if (*it == *cmp)
 					it = this->erase(it);
 				else
-					it++;
+					cmp = it++;;
 			}
 		};
 		// Где-то течет эта функция.
@@ -502,13 +509,12 @@ namespace ft {
 			list<T>::iterator ite = this->end();
 			list<T>::iterator cmp;
 
+			cmp = it++;
 			while (it != ite) {
-				it++;
-				cmp._current = it._current->prev;
-				if (binary_pred(*it, *cmp))
+				if (binary_pred(*cmp, *it))
 					it = this->erase(it);
 				else
-					it++;
+					cmp = it++;
 			}
 		};
 		void merge (list& x){
@@ -593,7 +599,6 @@ namespace ft {
 			ite._current->prev = nNode;
 		};
 
-		//template<T> friend bool operator==(const list<T>& lhs, const list<T>& rhs);
 	};
 
 	/* Non member function overloads */
@@ -601,10 +606,48 @@ namespace ft {
 	void swap (list<T>& x, list<T>& y) {
 		x.swap(y);
 	};
-//	template <class T>
-//	bool operator== (const list<T>& lhs, const list<T>& rhs) {
-//		list<T>::const_iterator	it = lhs.begin();
-//		list<T>::const_iterator	ite = rhs.end();
-//	};
+
+	template <class T>
+	bool operator==(const list<T>& lhs, const list<T>& rhs) {
+	 	typename list<T>::const_iterator	itl = lhs.begin();
+		typename list<T>::const_iterator	itle = lhs.end();
+		typename list<T>::const_iterator	itr = rhs.begin();
+		typename list<T>::const_iterator	itre = rhs.end();
+
+		if (lhs.size() != rhs.size())
+			return (false);
+		while (itl != itle && itr != itre) {
+			if (*itl != *itr)
+				return (false);
+			itl++;
+			itr++;
+		}
+		return (true);
+	};
+
+	template <class T>
+	bool operator!=(const list<T>& lhs, const list<T>& rhs) {
+		return (!(lhs == rhs));
+	};
+
+	template <class T>
+	bool operator<(const list<T>& lhs, const list<T>& rhs) {
+		return(ft::lexicographical_compare(lhs.begin(), lhs.end(), rhs.begin(), rhs.end()));
+	};
+
+	template <class T>
+	bool operator>(const list<T>& lhs, const list<T>& rhs) {
+		return (operator<(rhs, lhs));
+	};
+
+	template <class T>
+	bool operator<=(const list<T>& lhs, const list<T>& rhs) {
+		return (!(operator<(rhs, lhs)));
+	};
+
+	template <class T>
+	bool operator>=(const list<T>& lhs, const list<T>& rhs) {
+		return (!(operator<(lhs, rhs)));
+	};
 }
 #endif //FT_CONTAINERS_LIST_H

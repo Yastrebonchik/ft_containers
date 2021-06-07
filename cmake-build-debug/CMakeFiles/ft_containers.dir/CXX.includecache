@@ -6,18 +6,34 @@
 
 #IncludeRegexTransform: 
 
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/algorithm.hpp
+
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/list.cpp
+tests.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/tests.hpp
+list
+-
+stdlib.h
+-
+
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/list.hpp
 limits
 -
+algorithm.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/algorithm.hpp
 
-/mnt/c/Users/Alexander/CLionProjects/ft_containers/main.cpp
-iostream
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/tests.hpp
+vector
 -
 list
 -
-cmath
+map
 -
-string
+stack
+-
+queue
+-
+iostream
 -
 list.hpp
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/list.hpp

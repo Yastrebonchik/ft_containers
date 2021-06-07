@@ -84,7 +84,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/Alexander/CLionProjects/ft_containers/algorithm.hpp">
+			<Option target="ft_containers"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/Alexander/CLionProjects/ft_containers/deque.hpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alexander/CLionProjects/ft_containers/list.cpp">
 			<Option target="ft_containers"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Alexander/CLionProjects/ft_containers/list.hpp">
@@ -94,6 +100,9 @@
 			<Option target="ft_containers"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Alexander/CLionProjects/ft_containers/map.hpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alexander/CLionProjects/ft_containers/tests.hpp">
 			<Option target="ft_containers"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Alexander/CLionProjects/ft_containers/vector.hpp">
