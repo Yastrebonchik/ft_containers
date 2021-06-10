@@ -12,9 +12,14 @@
 
 #include <iostream>
 #include <list>
+#include <vector>
+#include <map>
+#include <queue>
+#include <stack>
 #include <cmath>
 #include <string>
 #include "list.hpp"
+#include "vector.hpp"
 
 bool single_digit (const int& value) { return (value<10); }
 
@@ -50,6 +55,9 @@ bool mycomparison (double first, double second)
 void test_list(void);
 
 int main() {
+	/*
+
+
 	test_list();
 	ft::list<int>						test;
 	std::list<int>  					a1;
@@ -420,6 +428,28 @@ int main() {
 //	std::cout << "List allocator max size = " << a1.get_allocator().max_size() << " and a1 max size = " << a1.max_size() << std::endl;
 //	std::cout << a1.get_allocator().max_size() - a1.max_size() << std::endl;
 //	std::cout << a1.get_allocator().max_size() / 2;
-	test_list();
+
+
+	*/
+
+	std::vector<int>	v1;
+	std::vector<int>::iterator	tv1;
+	ft::vector<int>		myv1;
+
+	myv1.push_back(15);
+	myv1.push_back(20);
+	myv1.insert(myv1.begin(), size_t(10), 22);
+//	myv1.push_back(30);
+//	myv1.push_back(15);
+//	myv1.push_back(20);
+//	myv1.push_back(30);
+
+	std::cout << "Capacity : " << myv1.capacity() << std::endl;
+	std::cout << "Size : " << myv1.size() << std::endl;
+	for (ft::vector<int>::iterator it = myv1.begin(); it != myv1.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+//	std::list<int>  					a1;
+//	std::list<int>::iterator 			test1;
+
 	return 0;
 }

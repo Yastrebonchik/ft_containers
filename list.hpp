@@ -234,9 +234,6 @@ namespace ft {
 					this->_current = rhs._current;
 				return (*this);
 			};
-
-			friend reverse_iterator list<T>::rbegin();
-			friend reverse_iterator list<T>::rend();
 		};
 
 		/* Iterators */

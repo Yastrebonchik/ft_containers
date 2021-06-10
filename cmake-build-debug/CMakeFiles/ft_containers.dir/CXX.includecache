@@ -8,33 +8,39 @@
 
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/algorithm.hpp
 
-/mnt/c/Users/Alexander/CLionProjects/ft_containers/list.cpp
-tests.hpp
-/mnt/c/Users/Alexander/CLionProjects/ft_containers/tests.hpp
-list
--
-stdlib.h
--
-
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/list.hpp
 limits
 -
 algorithm.hpp
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/algorithm.hpp
 
-/mnt/c/Users/Alexander/CLionProjects/ft_containers/tests.hpp
-vector
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/main.cpp
+iostream
 -
 list
 -
-map
+vector
 -
-stack
+map
 -
 queue
 -
-iostream
+stack
+-
+cmath
+-
+string
 -
 list.hpp
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/list.hpp
+vector.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/vector.hpp
+
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/vector.hpp
+limits
+-
+algorithm.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/algorithm.hpp
+cmath
+-
 
