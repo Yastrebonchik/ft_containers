@@ -15,6 +15,7 @@
 # include <iostream>
 //# include "../include/Vector.hpp"
 # include "list.hpp"
+# include "vector.hpp"
 //# include "../include/Map.hpp"
 //# include "../include/Queue.hpp"
 //# include "../include/Stack.hpp"
@@ -72,20 +73,20 @@ inline void check(std::string name, bool good)
 		std::cout << name << ": " << margin << FAIL << std::endl;
 };
 
-//template <typename T>
-//bool operator==(ft::Vector<T> &a, std::vector<T> &b)
-//{
-//	if (a.size() != b.size())
-//		return (false);
-//	if (a.empty() != b.empty())
-//		return (false);
-//	for (size_t i = 0; i < a.size(); i++)
-//	{
-//		if (a[i] != b[i])
-//			return (false);
-//	}
-//	return (true);
-//};
+template <typename T>
+bool operator==(ft::vector<T> &a, std::vector<T> &b)
+{
+	if (a.size() != b.size())
+		return (false);
+	if (a.empty() != b.empty())
+		return (false);
+	for (size_t i = 0; i < a.size(); i++)
+	{
+		if (a[i] != b[i])
+			return (false);
+	}
+	return (true);
+};
 
 template <typename T>
 bool operator==(ft::list<T> &a, std::list<T> &b)

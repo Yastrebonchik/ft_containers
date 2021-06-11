@@ -35,15 +35,23 @@ namespace ft {
 
 	public:
 		list() : _Mnode(new node()), _len(0){
+			this->_Mnode->next = this->_Mnode;
+			this->_Mnode->prev = this->_Mnode;
 		};
 		list(size_t n, const T& val = T()) : _Mnode(new node()), _len(0) {
+			this->_Mnode->next = this->_Mnode;
+			this->_Mnode->prev = this->_Mnode;
 			this->assign(n, val);
 		};
 		template <class InputIterator>
 		list (InputIterator first, InputIterator last) : _Mnode(new node()), _len(0) {
+			this->_Mnode->next = this->_Mnode;
+			this->_Mnode->prev = this->_Mnode;
 			this->assign(first, last);
 		};
 		list (const list& x) : _Mnode(new node()), _len(0) {
+			this->_Mnode->next = this->_Mnode;
+			this->_Mnode->prev = this->_Mnode;
 			this->assign(x.begin(), x.end());
 		};
 		~list(){
@@ -206,7 +214,7 @@ namespace ft {
 				return (*this);
 			};
 			reverse_iterator	operator--(int){
-				iterator	result(*this);
+				reverse_iterator	result(*this);
 
 				this->_current = this->_current->next;
 				return (result);
@@ -236,18 +244,70 @@ namespace ft {
 			};
 		};
 
+		/* Const reverse iterator class */
+		class const_reverse_iterator{
+		public:
+			node	*_current;
+
+			const_reverse_iterator() : _current(nullptr) {
+			};
+			const_reverse_iterator(const const_reverse_iterator &src) : _current(src._current){
+			};
+			~const_reverse_iterator(){
+			};
+
+			/* Operators */
+			const_reverse_iterator&	operator++(){
+				this->_current = this->_current->prev;
+				return (*this);
+			};
+			const_reverse_iterator	operator++(int){
+				const_reverse_iterator	result(*this);
+
+				this->_current = this->_current->prev;
+				return (result);
+			};
+			const_reverse_iterator&	operator--(){
+				this->_current = this->_current->next;
+				return (*this);
+			};
+			const_reverse_iterator	operator--(int){
+				const_reverse_iterator	result(*this);
+
+				this->_current = this->_current->next;
+				return (result);
+			};
+			const T&				operator*() {
+				return (this->_current->value);
+			};
+			const T*				operator->() const {
+				return &(operator*());
+			}
+			bool 				operator!=(const const_reverse_iterator &rhs){
+				if (this->_current != rhs._current)
+					return (true);
+				else
+					return (false);
+			};
+			bool 				operator==(const const_reverse_iterator &rhs){
+				if (this->_current == rhs._current)
+					return (true);
+				else
+					return (false);
+			};
+			const_reverse_iterator&	operator=(const reverse_iterator &rhs){
+				if (this != &rhs)
+					this->_current = rhs._current;
+				return (*this);
+			};
+		};
+
 		/* Iterators */
 		iterator begin(void) {
-			if (_len != 0)
-				return(iterator(this->_Mnode->next));
-			else
-				return(iterator(this->_Mnode));
+			return(iterator(this->_Mnode->next));
 		};
 		const_iterator	begin(void) const {
-			if (_len != 0)
-				return(const_iterator(this->_Mnode->next));
-			else
-				return(const_iterator(this->_Mnode));
+			return(const_iterator(this->_Mnode->next));
 		};
 		iterator			end() {
 			return(iterator(this->_Mnode));
@@ -256,19 +316,16 @@ namespace ft {
 			return(const_iterator(this->_Mnode));
 		};
 		reverse_iterator	rbegin() {
-			reverse_iterator	ret;
-
-			if (_len != 0)
-				ret._current = this->_Mnode->prev;
-			else
-				ret._current = this->_Mnode;
-			return (ret);
+			return(reverse_iterator(this->_Mnode->prev));
 		};
 		reverse_iterator	rend(){
-			reverse_iterator	ret;
-
-			ret._current = this->_Mnode;
-			return (ret);
+			return(const_iterator(this->_Mnode));
+		};
+		const_reverse_iterator rbegin() const {
+			return(reverse_iterator(this->_Mnode->prev));
+		};
+		const_reverse_iterator	rend() const {
+			return(const_reverse_iterator(this->_Mnode));
 		};
 
 		/* Capacity */
@@ -333,8 +390,8 @@ namespace ft {
 			delete address;
 			this->_len--;
 			if (this->_len == 0){
-				this->_Mnode->next = nullptr;
-				this->_Mnode->prev = nullptr;
+				this->_Mnode->next = this->_Mnode;
+				this->_Mnode->prev = this->_Mnode;
 			}
 		};
 		void 		push_back(const T& val) {
@@ -343,7 +400,7 @@ namespace ft {
 			newNode->next = this->_Mnode;
 			if (this->_len == 0)
 				newNode->prev = this->_Mnode;
-			else{
+			else {
 				newNode->prev = this->_Mnode->prev;
 				newNode->prev->next = newNode;
 			}
@@ -360,8 +417,8 @@ namespace ft {
 			delete address;
 			this->_len--;
 			if (this->_len == 0){
-				this->_Mnode->next = nullptr;
-				this->_Mnode->prev = nullptr;
+				this->_Mnode->next = this->_Mnode;
+				this->_Mnode->prev = this->_Mnode;
 			}
 		};
 		iterator	insert(iterator position, const T& val) {

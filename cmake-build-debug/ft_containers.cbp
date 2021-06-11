@@ -105,6 +105,9 @@
 		<Unit filename="/mnt/c/Users/Alexander/CLionProjects/ft_containers/tests.hpp">
 			<Option target="ft_containers"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/Alexander/CLionProjects/ft_containers/vector.cpp">
+			<Option target="ft_containers"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/Alexander/CLionProjects/ft_containers/vector.hpp">
 			<Option target="ft_containers"/>
 		</Unit>

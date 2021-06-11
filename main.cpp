@@ -52,6 +52,7 @@ struct is_near {
 bool mycomparison (double first, double second)
 { return ( int(first)<int(second) ); }
 
+void test_vector(void);
 void test_list(void);
 
 int main() {
@@ -430,7 +431,7 @@ int main() {
 //	std::cout << a1.get_allocator().max_size() / 2;
 
 
-	*/
+
 
 	std::vector<int>	v1;
 	std::vector<int>::iterator	tv1;
@@ -438,6 +439,9 @@ int main() {
 
 	myv1.push_back(15);
 	myv1.push_back(20);
+	std::cout << v1.capacity() << std::endl;
+	v1.insert(v1.begin(), 10, 22);
+	std::cout << v1.capacity() << std::endl;
 	myv1.insert(myv1.begin(), size_t(10), 22);
 //	myv1.push_back(30);
 //	myv1.push_back(15);
@@ -448,8 +452,36 @@ int main() {
 	std::cout << "Size : " << myv1.size() << std::endl;
 	for (ft::vector<int>::iterator it = myv1.begin(); it != myv1.end(); ++it)
 		std::cout << "Value = " << *it << std::endl;
+	std::cout << myv1.size() << std::endl;
+	std::cout << "-------------------------------------" << std::endl;
+	myv1.assign((size_t)10, 143214);
+	for (ft::vector<int>::iterator it = myv1.begin(); it != myv1.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	std::cout << myv1.size() << std::endl;
+	std::cout << "-------------------------------------" << std::endl;
+	myv1.insert(myv1.end(), myv1.begin(), myv1.end());
+	for (ft::vector<int>::iterator it = myv1.begin(); it != myv1.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+
+	std::cout << myv1.size() << std::endl;
+
+	myv1.insert(myv1.end(), (size_t)10, 21);
+	myv1.erase(myv1.end() - 1);
+
+	for (ft::vector<int>::iterator it = myv1.begin(); it != myv1.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+
+	std::cout << myv1.size() << std::endl;
 //	std::list<int>  					a1;
 //	std::list<int>::iterator 			test1;
 
+	 */
+
+	std::list<int>	l1;
+
+	for (std::list<int>::iterator it = l1.begin(); it != l1.end(); ++it)
+		std::cout << "Value = " << *it << std::endl;
+	test_list();
+	test_vector();
 	return 0;
 }

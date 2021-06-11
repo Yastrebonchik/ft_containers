@@ -177,6 +177,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+vector.o: vector.cpp.o
+
+.PHONY : vector.o
+
+# target to build an object file
+vector.cpp.o:
+	$(MAKE) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/vector.cpp.o
+.PHONY : vector.cpp.o
+
+vector.i: vector.cpp.i
+
+.PHONY : vector.i
+
+# target to preprocess a source file
+vector.cpp.i:
+	$(MAKE) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/vector.cpp.i
+.PHONY : vector.cpp.i
+
+vector.s: vector.cpp.s
+
+.PHONY : vector.s
+
+# target to generate assembly for a file
+vector.cpp.s:
+	$(MAKE) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/vector.cpp.s
+.PHONY : vector.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... vector.o"
+	@echo "... vector.i"
+	@echo "... vector.s"
 .PHONY : help
 
 
