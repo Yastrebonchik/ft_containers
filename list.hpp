@@ -34,7 +34,7 @@ namespace ft {
 		size_t	_len;
 
 	public:
-		list() : _Mnode(new node()), _len(0){
+		list() : _Mnode(new node()), _len(0) {
 			this->_Mnode->next = this->_Mnode;
 			this->_Mnode->prev = this->_Mnode;
 		};
@@ -54,7 +54,7 @@ namespace ft {
 			this->_Mnode->prev = this->_Mnode;
 			this->assign(x.begin(), x.end());
 		};
-		~list(){
+		~list() {
 			this->clear();
 			delete this->_Mnode;
 		};
@@ -65,7 +65,7 @@ namespace ft {
 		};
 
 		/* Forward iterator class */
-		class iterator{
+		class iterator {
 		public:
 			node	*_current;
 
@@ -75,49 +75,49 @@ namespace ft {
 			};
 			iterator(const iterator &src) : _current(src._current) {
 			};
-			~iterator(){
+			~iterator() {
 			};
 
 			/* Operators */
-			iterator&	operator++(){
+			iterator&	operator++() {
 				this->_current = this->_current->next;
 				return (*this);
 			};
-			iterator	operator++(int){
+			iterator	operator++(int) {
 				iterator	result(*this);
 
 				this->_current = this->_current->next;
 				return (result);
 			};
-			iterator&	operator--(){
+			iterator&	operator--() {
 				this->_current = this->_current->prev;
 				return (*this);
 			};
-			iterator	operator--(int){
+			iterator	operator--(int) {
 				iterator	result(*this);
 
 				this->_current = this->_current->prev;
 				return (result);
 			};
-			T&			operator*(){
+			T&			operator*() {
 				return (this->_current->value);
 			};
 			T*			operator->() const {
 				return &(operator*());
 			}
-			bool 		operator!=(const iterator &rhs){
+			bool 		operator!=(const iterator &rhs) {
 				if (this->_current != rhs._current)
 					return (true);
 				else
 					return (false);
 			};
-			bool 		operator==(const iterator &rhs){
+			bool 		operator==(const iterator &rhs) {
 				if (this->_current == rhs._current)
 					return (true);
 				else
 					return (false);
 			};
-			iterator&	operator=(const iterator &rhs){
+			iterator&	operator=(const iterator &rhs) {
 				if (this != &rhs)
 					this->_current = rhs._current;
 				return (*this);
@@ -132,7 +132,7 @@ namespace ft {
 
 			const_iterator() : _current(nullptr) {
 			};
-			const_iterator(node *Node) : _current(Node){
+			const_iterator(node *Node) : _current(Node) {
 			};
 			const_iterator(const const_iterator &src) : _current(src._current) {
 			};
@@ -187,57 +187,59 @@ namespace ft {
 		};
 
 		/* Reverse iterator class */
-		class reverse_iterator{
+		class reverse_iterator {
 		public:
 			node	*_current;
 
 			reverse_iterator() : _current(nullptr) {
 			};
-			reverse_iterator(const reverse_iterator &src) : _current(src._current){
+			reverse_iterator(node *Node) : _current(Node){
 			};
-			~reverse_iterator(){
+			reverse_iterator(const reverse_iterator &src) : _current(src._current) {
+			};
+			~reverse_iterator() {
 			};
 
 			/* Operators */
-			reverse_iterator&	operator++(){
+			reverse_iterator&	operator++() {
 				this->_current = this->_current->prev;
 				return (*this);
 			};
-			reverse_iterator	operator++(int){
+			reverse_iterator	operator++(int) {
 				reverse_iterator	result(*this);
 
 				this->_current = this->_current->prev;
 				return (result);
 			};
-			reverse_iterator&	operator--(){
+			reverse_iterator&	operator--() {
 				this->_current = this->_current->next;
 				return (*this);
 			};
-			reverse_iterator	operator--(int){
+			reverse_iterator	operator--(int) {
 				reverse_iterator	result(*this);
 
 				this->_current = this->_current->next;
 				return (result);
 			};
-			T&					operator*(){
+			T&					operator*() {
 				return (this->_current->value);
 			};
 			T*					operator->() const {
 				return &(operator*());
 			}
-			bool 				operator!=(const reverse_iterator &rhs){
+			bool 				operator!=(const reverse_iterator &rhs) {
 				if (this->_current != rhs._current)
 					return (true);
 				else
 					return (false);
 			};
-			bool 				operator==(const reverse_iterator &rhs){
+			bool 				operator==(const reverse_iterator &rhs) {
 				if (this->_current == rhs._current)
 					return (true);
 				else
 					return (false);
 			};
-			reverse_iterator&	operator=(const reverse_iterator &rhs){
+			reverse_iterator&	operator=(const reverse_iterator &rhs) {
 				if (this != &rhs)
 					this->_current = rhs._current;
 				return (*this);
@@ -251,27 +253,29 @@ namespace ft {
 
 			const_reverse_iterator() : _current(nullptr) {
 			};
-			const_reverse_iterator(const const_reverse_iterator &src) : _current(src._current){
+			const_reverse_iterator(node *Node) : _current(Node){
 			};
-			~const_reverse_iterator(){
+			const_reverse_iterator(const const_reverse_iterator &src) : _current(src._current) {
+			};
+			~const_reverse_iterator() {
 			};
 
 			/* Operators */
-			const_reverse_iterator&	operator++(){
+			const_reverse_iterator&	operator++() {
 				this->_current = this->_current->prev;
 				return (*this);
 			};
-			const_reverse_iterator	operator++(int){
+			const_reverse_iterator	operator++(int) {
 				const_reverse_iterator	result(*this);
 
 				this->_current = this->_current->prev;
 				return (result);
 			};
-			const_reverse_iterator&	operator--(){
+			const_reverse_iterator&	operator--() {
 				this->_current = this->_current->next;
 				return (*this);
 			};
-			const_reverse_iterator	operator--(int){
+			const_reverse_iterator	operator--(int) {
 				const_reverse_iterator	result(*this);
 
 				this->_current = this->_current->next;
@@ -283,19 +287,19 @@ namespace ft {
 			const T*				operator->() const {
 				return &(operator*());
 			}
-			bool 					operator!=(const const_reverse_iterator &rhs){
+			bool 					operator!=(const const_reverse_iterator &rhs) {
 				if (this->_current != rhs._current)
 					return (true);
 				else
 					return (false);
 			};
-			bool 					operator==(const const_reverse_iterator &rhs){
+			bool 					operator==(const const_reverse_iterator &rhs) {
 				if (this->_current == rhs._current)
 					return (true);
 				else
 					return (false);
 			};
-			const_reverse_iterator&	operator=(const reverse_iterator &rhs){
+			const_reverse_iterator&	operator=(const reverse_iterator &rhs) {
 				if (this != &rhs)
 					this->_current = rhs._current;
 				return (*this);
@@ -318,11 +322,11 @@ namespace ft {
 		reverse_iterator		rbegin() {
 			return(reverse_iterator(this->_Mnode->prev));
 		};
-		reverse_iterator		rend(){
-			return(reverse_iterator(this->_Mnode));
-		};
 		const_reverse_iterator	rbegin() const {
 			return(const_reverse_iterator(this->_Mnode->prev));
+		};
+		reverse_iterator		rend(){
+			return(reverse_iterator(this->_Mnode));
 		};
 		const_reverse_iterator	rend() const {
 			return(const_reverse_iterator(this->_Mnode));
@@ -338,39 +342,24 @@ namespace ft {
 		size_t		size() const {
 			return (this->_len);
 		};
-		// Need to find fix for this shit
+
 		size_t		max_size() const {
-			size_t	nodelen = sizeof(node*);
-			size_t	tlen = sizeof(T*);
-			std::cout << nodelen << ": " << tlen << std::endl;
 
 			return (std::numeric_limits<size_t>::max() / (sizeof(node)));
 		};
 
 		/* Element access */
 		T&			front() {
-			if (this->_len > 1)
-				return (this->_Mnode->next->value);
-			else
-				return (this->_Mnode->value);
+			return (this->_Mnode->next->value);
 		};
 		const T&	front() const {
-			if (this->_len > 1)
-				return (this->_Mnode->next->value);
-			else
-				return (this->_Mnode->value);
+			return (this->_Mnode->next->value);
 		};
 		T&			back() {
-			if (this->_len > 1)
-				return (this->_Mnode->prev->value);
-			else
-				return (this->_Mnode->value);
+			return (this->_Mnode->prev->value);
 		};
 		const T&	back() const {
-			if (this->_len > 1)
-				return (this->_Mnode->prev->value);
-			else
-				return (this->_Mnode->value);
+			return (this->_Mnode->prev->value);
 		};
 
 		/* Modifiers */
@@ -484,7 +473,12 @@ namespace ft {
 			this->_len--;
 			return (ret);
 		};
-		void swap (list& x){
+		iterator	erase(iterator first, iterator last) {
+			while (first != last)
+				first = this->erase(first);
+			return (first);
+		};
+		void swap (list& x) {
 			size_t	nlen;
 			node	*nNode;
 
@@ -495,17 +489,12 @@ namespace ft {
 			this->_Mnode = x._Mnode;
 			x._Mnode = nNode;
 		};
-		iterator	erase(iterator first, iterator last) {
-			while (first != last)
-				first = this->erase(first);
-			return (first);
-		};
 		void resize (size_t n, T val = T()) {
 			if (n > this->size()){
 				while (n > this->size())
 					this->push_back(val);
 			}
-			else{
+			else {
 				while (n < this->size())
 					this->pop_back();
 			}
