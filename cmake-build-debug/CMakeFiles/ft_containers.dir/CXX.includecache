@@ -8,6 +8,14 @@
 
 /Users/kcedra/ft_containers/algorithm.hpp
 
+/Users/kcedra/ft_containers/list.cpp
+tests.hpp
+/Users/kcedra/ft_containers/tests.hpp
+list
+-
+stdlib.h
+-
+
 /Users/kcedra/ft_containers/list.hpp
 limits
 -
@@ -35,6 +43,28 @@ list.hpp
 /Users/kcedra/ft_containers/list.hpp
 vector.hpp
 /Users/kcedra/ft_containers/vector.hpp
+
+/Users/kcedra/ft_containers/tests.hpp
+vector
+-
+list
+-
+map
+-
+stack
+-
+queue
+-
+iostream
+-
+list.hpp
+/Users/kcedra/ft_containers/list.hpp
+vector.hpp
+/Users/kcedra/ft_containers/vector.hpp
+
+/Users/kcedra/ft_containers/vector.cpp
+./tests.hpp
+/Users/kcedra/ft_containers/tests.hpp
 
 /Users/kcedra/ft_containers/vector.hpp
 limits

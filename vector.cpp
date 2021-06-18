@@ -81,6 +81,7 @@ static void max_size(void)
 	print_header("Max size");
 	ft::vector<std::string> v1;
 	std::vector<std::string> v2;
+	std::cout << v1.max_size() << "; " << v2.max_size() << std::endl;
 	check("v1.max_size() == v2.max_size()", v1.max_size(), v2.max_size());
 	v1.push_back("test");
 	v2.push_back("test");

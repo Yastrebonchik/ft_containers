@@ -482,8 +482,20 @@ int main() {
 //
 //	it.operator[]();
 
-	test_list();
-	//test_vector();
+	//test_list();
+	test_vector();
 
+	std::cout << "---------------------------------------------" << std::endl;
+
+	ft::vector<int>		v1((size_t)10, 134);
+
+	v1.push_back(4124123);
+	v1.insert(v1.begin(), 656757);
+	v1.insert(v1.begin(), (size_t)4, -14324);
+	ft::vector<int>::reverse_iterator it = v1.rbegin();
+	ft::vector<int>::reverse_iterator ite = v1.rend();
+	for (it = v1.rbegin(); it != ite; ++it)
+		std::cout << "Value = " << *it << std::endl;
+	std::cout << "Capacity : " << v1.capacity() << std::endl;
 	return 0;
 }
