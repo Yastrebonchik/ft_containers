@@ -92,7 +92,23 @@ namespace ft {
 					newIt++;
 				return (newIt);
 			};
+			iterator	operator+=(const int &rhs) const {
+				int 		offset = 0;
+				iterator	newIt = *this;
+
+				while (offset++ < rhs)
+					newIt++;
+				return (newIt);
+			};
 			iterator	operator-(const	int &rhs) const {
+				int 		offset = rhs;
+				iterator	newIt = *this;
+
+				while (offset-- > 0)
+					newIt--;
+				return (newIt);
+			};
+			iterator	operator-=(const int &rhs) const {
 				int 		offset = rhs;
 				iterator	newIt = *this;
 

@@ -477,11 +477,12 @@ int main() {
 
 	 */
 
-	std::list<int>	l1;
+//	std::list<int>	l1;
+//	std::vector<int>::iterator 	it;
+//
+//	it.operator[]();
 
-	for (std::list<int>::iterator it = l1.begin(); it != l1.end(); ++it)
-		std::cout << "Value = " << *it << std::endl;
 	test_list();
-	test_vector();
+	//test_vector();
 	return 0;
 }

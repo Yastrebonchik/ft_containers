@@ -74,6 +74,7 @@ static void max_size(void)
 	std::list<int> l2;
 	ft::list<std::string> l3;
 	std::list<std::string> l4;
+	std::cout << l1.max_size() << "; " << l2.max_size() << std::endl;
 	check("l1.max_size() == l2.max_size()", l1.max_size(), l2.max_size());
 	check("l3.max_size() == l4.max_size()", l3.max_size(), l4.max_size());
 }

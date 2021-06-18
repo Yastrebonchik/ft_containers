@@ -8,6 +8,12 @@
 namespace ft {
 	template<class T>
 	class deque {
+	private:
+		class deque_node {
+			T		value[4];
+			node*	next,
+			node*	prev;
+		};
 	};
 }
 #endif //FT_CONTAINERS_DEQUE_HPP

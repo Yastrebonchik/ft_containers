@@ -126,7 +126,7 @@ namespace ft {
 		};
 
 		/* Const Forward iterator class */
-		class const_iterator{
+		class const_iterator {
 		public:
 			node	*_current;
 
@@ -283,13 +283,13 @@ namespace ft {
 			const T*				operator->() const {
 				return &(operator*());
 			}
-			bool 				operator!=(const const_reverse_iterator &rhs){
+			bool 					operator!=(const const_reverse_iterator &rhs){
 				if (this->_current != rhs._current)
 					return (true);
 				else
 					return (false);
 			};
-			bool 				operator==(const const_reverse_iterator &rhs){
+			bool 					operator==(const const_reverse_iterator &rhs){
 				if (this->_current == rhs._current)
 					return (true);
 				else
@@ -303,26 +303,26 @@ namespace ft {
 		};
 
 		/* Iterators */
-		iterator begin(void) {
+		iterator 				begin(void) {
 			return(iterator(this->_Mnode->next));
 		};
-		const_iterator	begin(void) const {
+		const_iterator			begin(void) const {
 			return(const_iterator(this->_Mnode->next));
 		};
-		iterator			end() {
+		iterator				end() {
 			return(iterator(this->_Mnode));
 		};
-		const_iterator		end() const {
+		const_iterator			end() const {
 			return(const_iterator(this->_Mnode));
 		};
-		reverse_iterator	rbegin() {
+		reverse_iterator		rbegin() {
 			return(reverse_iterator(this->_Mnode->prev));
 		};
-		reverse_iterator	rend(){
-			return(const_iterator(this->_Mnode));
+		reverse_iterator		rend(){
+			return(reverse_iterator(this->_Mnode));
 		};
-		const_reverse_iterator rbegin() const {
-			return(reverse_iterator(this->_Mnode->prev));
+		const_reverse_iterator	rbegin() const {
+			return(const_reverse_iterator(this->_Mnode->prev));
 		};
 		const_reverse_iterator	rend() const {
 			return(const_reverse_iterator(this->_Mnode));
@@ -335,22 +335,38 @@ namespace ft {
 			else
 				return false;
 		};
-		size_t		size() const{
+		size_t		size() const {
 			return (this->_len);
 		};
 		// Need to find fix for this shit
-		size_t		max_size() const{
-			return (std::numeric_limits<size_t>::max()/(sizeof(T)*4));
+		size_t		max_size() const {
+			size_t	nodelen = sizeof(node*);
+			size_t	tlen = sizeof(T*);
+			std::cout << nodelen << ": " << tlen << std::endl;
+
+			return (std::numeric_limits<size_t>::max() / (sizeof(node)));
 		};
 
 		/* Element access */
-		T&			front(){
+		T&			front() {
 			if (this->_len > 1)
 				return (this->_Mnode->next->value);
 			else
 				return (this->_Mnode->value);
 		};
-		T&			back(){
+		const T&	front() const {
+			if (this->_len > 1)
+				return (this->_Mnode->next->value);
+			else
+				return (this->_Mnode->value);
+		};
+		T&			back() {
+			if (this->_len > 1)
+				return (this->_Mnode->prev->value);
+			else
+				return (this->_Mnode->value);
+		};
+		const T&	back() const {
 			if (this->_len > 1)
 				return (this->_Mnode->prev->value);
 			else
