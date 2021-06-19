@@ -196,6 +196,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+queue_tests.o: queue_tests.cpp.o
+
+.PHONY : queue_tests.o
+
+# target to build an object file
+queue_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/queue_tests.cpp.o
+.PHONY : queue_tests.cpp.o
+
+queue_tests.i: queue_tests.cpp.i
+
+.PHONY : queue_tests.i
+
+# target to preprocess a source file
+queue_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/queue_tests.cpp.i
+.PHONY : queue_tests.cpp.i
+
+queue_tests.s: queue_tests.cpp.s
+
+.PHONY : queue_tests.s
+
+# target to generate assembly for a file
+queue_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/queue_tests.cpp.s
+.PHONY : queue_tests.cpp.s
+
 vector.o: vector.cpp.o
 
 .PHONY : vector.o
@@ -223,6 +250,33 @@ vector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/vector.cpp.s
 .PHONY : vector.cpp.s
 
+vector_tests.o: vector_tests.cpp.o
+
+.PHONY : vector_tests.o
+
+# target to build an object file
+vector_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/vector_tests.cpp.o
+.PHONY : vector_tests.cpp.o
+
+vector_tests.i: vector_tests.cpp.i
+
+.PHONY : vector_tests.i
+
+# target to preprocess a source file
+vector_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/vector_tests.cpp.i
+.PHONY : vector_tests.cpp.i
+
+vector_tests.s: vector_tests.cpp.s
+
+.PHONY : vector_tests.s
+
+# target to generate assembly for a file
+vector_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/vector_tests.cpp.s
+.PHONY : vector_tests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -238,9 +292,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... queue_tests.o"
+	@echo "... queue_tests.i"
+	@echo "... queue_tests.s"
 	@echo "... vector.o"
 	@echo "... vector.i"
 	@echo "... vector.s"
+	@echo "... vector_tests.o"
+	@echo "... vector_tests.i"
+	@echo "... vector_tests.s"
 .PHONY : help
 
 

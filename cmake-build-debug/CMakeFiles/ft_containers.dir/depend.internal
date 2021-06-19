@@ -11,10 +11,32 @@ CMakeFiles/ft_containers.dir/main.cpp.o
  /Users/kcedra/ft_containers/algorithm.hpp
  /Users/kcedra/ft_containers/list.hpp
  /Users/kcedra/ft_containers/main.cpp
+ /Users/kcedra/ft_containers/queue.hpp
+ /Users/kcedra/ft_containers/queue_tests.hpp
+ /Users/kcedra/ft_containers/test_headers.hpp
  /Users/kcedra/ft_containers/vector.hpp
+ /Users/kcedra/ft_containers/vector_tests.hpp
+CMakeFiles/ft_containers.dir/queue_tests.cpp.o
+ /Users/kcedra/ft_containers/algorithm.hpp
+ /Users/kcedra/ft_containers/list.hpp
+ /Users/kcedra/ft_containers/queue.hpp
+ /Users/kcedra/ft_containers/queue_tests.cpp
+ /Users/kcedra/ft_containers/queue_tests.hpp
+ /Users/kcedra/ft_containers/test_headers.hpp
+ /Users/kcedra/ft_containers/vector.hpp
+ /Users/kcedra/ft_containers/vector_tests.hpp
 CMakeFiles/ft_containers.dir/vector.cpp.o
  /Users/kcedra/ft_containers/algorithm.hpp
  /Users/kcedra/ft_containers/list.hpp
  /Users/kcedra/ft_containers/tests.hpp
  /Users/kcedra/ft_containers/vector.cpp
  /Users/kcedra/ft_containers/vector.hpp
+CMakeFiles/ft_containers.dir/vector_tests.cpp.o
+ /Users/kcedra/ft_containers/algorithm.hpp
+ /Users/kcedra/ft_containers/list.hpp
+ /Users/kcedra/ft_containers/queue.hpp
+ /Users/kcedra/ft_containers/queue_tests.hpp
+ /Users/kcedra/ft_containers/test_headers.hpp
+ /Users/kcedra/ft_containers/vector.hpp
+ /Users/kcedra/ft_containers/vector_tests.cpp
+ /Users/kcedra/ft_containers/vector_tests.hpp

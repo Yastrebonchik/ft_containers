@@ -10,16 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <list>
-#include <vector>
-#include <map>
-#include <queue>
-#include <stack>
-#include <cmath>
-#include <string>
-#include "list.hpp"
-#include "vector.hpp"
+#include "test_headers.hpp"
 
 bool single_digit (const int& value) { return (value<10); }
 
@@ -475,7 +466,7 @@ int main() {
 //	std::list<int>  					a1;
 //	std::list<int>::iterator 			test1;
 
-	 */
+
 
 //	std::list<int>	l1;
 //	std::vector<int>::iterator 	it;
@@ -483,7 +474,7 @@ int main() {
 //	it.operator[]();
 
 	//test_list();
-	test_vector();
+	//test_vector();
 
 	std::cout << "---------------------------------------------" << std::endl;
 
@@ -497,5 +488,11 @@ int main() {
 	for (it = v1.rbegin(); it != ite; ++it)
 		std::cout << "Value = " << *it << std::endl;
 	std::cout << "Capacity : " << v1.capacity() << std::endl;
+
+	*/
+
+	//test_vector();
+	vector_tests();
+	queue_tests();
 	return 0;
 }

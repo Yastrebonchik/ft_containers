@@ -10,11 +10,33 @@ CMakeFiles/ft_containers.dir/list.cpp.o: ../vector.hpp
 CMakeFiles/ft_containers.dir/main.cpp.o: ../algorithm.hpp
 CMakeFiles/ft_containers.dir/main.cpp.o: ../list.hpp
 CMakeFiles/ft_containers.dir/main.cpp.o: ../main.cpp
+CMakeFiles/ft_containers.dir/main.cpp.o: ../queue.hpp
+CMakeFiles/ft_containers.dir/main.cpp.o: ../queue_tests.hpp
+CMakeFiles/ft_containers.dir/main.cpp.o: ../test_headers.hpp
 CMakeFiles/ft_containers.dir/main.cpp.o: ../vector.hpp
+CMakeFiles/ft_containers.dir/main.cpp.o: ../vector_tests.hpp
+
+CMakeFiles/ft_containers.dir/queue_tests.cpp.o: ../algorithm.hpp
+CMakeFiles/ft_containers.dir/queue_tests.cpp.o: ../list.hpp
+CMakeFiles/ft_containers.dir/queue_tests.cpp.o: ../queue.hpp
+CMakeFiles/ft_containers.dir/queue_tests.cpp.o: ../queue_tests.cpp
+CMakeFiles/ft_containers.dir/queue_tests.cpp.o: ../queue_tests.hpp
+CMakeFiles/ft_containers.dir/queue_tests.cpp.o: ../test_headers.hpp
+CMakeFiles/ft_containers.dir/queue_tests.cpp.o: ../vector.hpp
+CMakeFiles/ft_containers.dir/queue_tests.cpp.o: ../vector_tests.hpp
 
 CMakeFiles/ft_containers.dir/vector.cpp.o: ../algorithm.hpp
 CMakeFiles/ft_containers.dir/vector.cpp.o: ../list.hpp
 CMakeFiles/ft_containers.dir/vector.cpp.o: ../tests.hpp
 CMakeFiles/ft_containers.dir/vector.cpp.o: ../vector.cpp
 CMakeFiles/ft_containers.dir/vector.cpp.o: ../vector.hpp
+
+CMakeFiles/ft_containers.dir/vector_tests.cpp.o: ../algorithm.hpp
+CMakeFiles/ft_containers.dir/vector_tests.cpp.o: ../list.hpp
+CMakeFiles/ft_containers.dir/vector_tests.cpp.o: ../queue.hpp
+CMakeFiles/ft_containers.dir/vector_tests.cpp.o: ../queue_tests.hpp
+CMakeFiles/ft_containers.dir/vector_tests.cpp.o: ../test_headers.hpp
+CMakeFiles/ft_containers.dir/vector_tests.cpp.o: ../vector.hpp
+CMakeFiles/ft_containers.dir/vector_tests.cpp.o: ../vector_tests.cpp
+CMakeFiles/ft_containers.dir/vector_tests.cpp.o: ../vector_tests.hpp
 

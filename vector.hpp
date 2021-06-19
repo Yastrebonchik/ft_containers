@@ -8,7 +8,7 @@
 # include <limits>
 # include "algorithm.hpp"
 # include <cmath>
-# include <exception>
+# include <stdexcept>
 
 namespace ft {
 	template<class T>
@@ -27,6 +27,8 @@ namespace ft {
 		};
 
 	public:
+		//typedef std::ptrdiff_t difference_type;
+
 		vector() :  _vector(nullptr), _len(0), _capacity(0) {
 		};
 		vector (size_t n, const T& val = T()) : _vector(nullptr), _len(0), _capacity(0) {
@@ -107,64 +109,92 @@ namespace ft {
 				this->_pos--;
 				return (result);
 			};
-			iterator	operator+(const	int &rhs) {
+			iterator	operator+(int rhs) {
 				int 		offset = 0;
 				iterator	newIt = *this;
 
-				while (offset++ < rhs)
-					newIt++;
+				if (rhs > 0) {
+					while (offset++ < rhs)
+						newIt++;
+				}
+				else {
+					while (offset-- > rhs)
+						newIt--;
+				}
 				return (newIt);
 			};
-			iterator	operator-(const	int &rhs) {
+			friend	iterator	operator+(int lhs, iterator &rhs){
+				return (rhs + lhs);
+			};
+			iterator	operator-(int rhs) {
 				int 		offset = rhs;
 				iterator	newIt = *this;
 
-				while (offset-- > 0)
-					newIt--;
+				if (rhs > 0) {
+					while (offset-- > 0)
+						newIt--;
+				}
+				else {
+					while (offset++ < 0)
+						newIt++;
+				}
 				return (newIt);
 			};
-			size_t		operator-(const iterator &rhs) const {
-				size_t	diff = 0;
+			int			operator-(const iterator &rhs) const {
+				int			diff = 0;
+				iterator	cpy = *this;
 
-				while (this-- != &rhs)
+				while (cpy-- != rhs)
 					diff++;
 				return (diff);
 			};
-			iterator	operator<(const iterator &rhs) const {
+			bool		operator<(const iterator &rhs) const {
 				return (this->_pos < rhs._pos);
 			}
-			iterator	operator>(const iterator &rhs) const {
+			bool		operator>(const iterator &rhs) const {
 				return (this->_pos > rhs._pos);
 			}
-			iterator	operator<=(const iterator &rhs) const {
+			bool		operator<=(const iterator &rhs) const {
 				return (this->_pos <= rhs._pos);
 			}
-			iterator	operator>=(const iterator &rhs) const {
+			bool		operator>=(const iterator &rhs) const {
 				return (this->_pos >= rhs._pos);
 			}
-			iterator	operator+=(const int &rhs) {
+			iterator&	operator+=(int rhs) {
 				int 		offset = 0;
-				iterator	newIt = *this;
 
-				while (offset++ < rhs)
-					newIt++;
-				return (newIt);
-			};
-			iterator	operator-=(const int &rhs) {
-				int 		offset = rhs;
-				iterator	newIt = *this;
-
-				while (offset-- > 0)
-					newIt--;
-				return (newIt);
-			};
-			iterator&	operator=(const iterator &rhs) {
-				if (this != &rhs)
-					this->_ptr = rhs._ptr;
+				if (rhs > 0) {
+					while (offset++ < rhs)
+						(*this)++;
+				}
+				else {
+					while (offset-- > rhs)
+						(*this)--;
+				}
 				return (*this);
 			};
-			T&			operator[](const int &rhs) {
-				return (*(this + rhs));
+			iterator&	operator-=(int rhs) {
+				int 		offset = rhs;
+
+				if (rhs > 0) {
+					while (offset-- > 0)
+						(*this)--;
+				}
+				else {
+					while (offset++ < 0)
+						(*this)++;
+				}
+				return (*this);
+			};
+			iterator&	operator=(const iterator &rhs) {
+				if (this != &rhs) {
+					this->_pos = rhs._pos;
+					this->_ptr = rhs._ptr;
+				}
+				return (*this);
+			};
+			T&			operator[](int rhs) {
+				return (*(*this + rhs));
 			};
 		};
 
@@ -226,64 +256,92 @@ namespace ft {
 				this->_pos--;
 				return (result);
 			};
-			const_iterator	operator+(const	int &rhs) {
+			const_iterator	operator+(int rhs) {
 				int 			offset = 0;
 				const_iterator	newIt = *this;
 
-				while (offset++ < rhs)
-					newIt++;
+				if (rhs > 0) {
+					while (offset++ < rhs)
+						newIt++;
+				}
+				else {
+					while (offset-- > rhs)
+						newIt--;
+				}
 				return (newIt);
 			};
-			const_iterator	operator-(const	int &rhs) {
+			friend	const_iterator	operator+(int lhs, const_iterator &rhs){
+				return (rhs + lhs);
+			};
+			const_iterator	operator-(int rhs) {
 				int 			offset = rhs;
 				const_iterator	newIt = *this;
 
-				while (offset-- > 0)
-					newIt--;
+				if (rhs > 0) {
+					while (offset-- > 0)
+						newIt--;
+				}
+				else {
+					while (offset++ < 0)
+						newIt++;
+				}
 				return (newIt);
 			};
-			size_t			operator-(const const_iterator &rhs) {
-				size_t	diff = 0;
+			int				operator-(const const_iterator &rhs) const {
+				int			diff = 0;
+				const_iterator	cpy = *this;
 
-				while (this-- != &rhs)
+				while (cpy-- != rhs)
 					diff++;
 				return (diff);
 			};
-			const_iterator	operator<(const const_iterator &rhs) const {
+			bool			operator<(const const_iterator &rhs) const {
 				return (this->_pos < rhs._pos);
 			}
-			const_iterator	operator>(const const_iterator &rhs) const {
+			bool			operator>(const const_iterator &rhs) const {
 				return (this->_pos > rhs._pos);
 			}
-			const_iterator	operator<=(const const_iterator &rhs) const {
+			bool			operator<=(const const_iterator &rhs) const {
 				return (this->_pos <= rhs._pos);
 			}
-			const_iterator	operator>=(const const_iterator &rhs) const {
+			bool			operator>=(const const_iterator &rhs) const {
 				return (this->_pos >= rhs._pos);
 			}
-			const_iterator	operator+=(const int &rhs) {
+			const_iterator&	operator+=(int rhs) {
 				int 		offset = 0;
-				const_iterator	newIt = *this;
 
-				while (offset++ < rhs)
-					newIt++;
-				return (newIt);
-			};
-			const_iterator	operator-=(const int &rhs) {
-				int 		offset = rhs;
-				const_iterator	newIt = *this;
-
-				while (offset-- > 0)
-					newIt--;
-				return (newIt);
-			};
-			const_iterator&	operator=(const const_iterator &rhs) {
-				if (this != &rhs)
-					this->_ptr = rhs._ptr;
+				if (rhs > 0) {
+					while (offset++ < rhs)
+						(*this)++;
+				}
+				else {
+					while (offset-- > rhs)
+						(*this)--;
+				}
 				return (*this);
 			};
-			const	T&		operator[](const int &rhs) const {
-				return (*(this + rhs));
+			const_iterator&	operator-=(int rhs) {
+				int 		offset = rhs;
+
+				if (rhs > 0) {
+					while (offset-- > 0)
+						(*this)--;
+				}
+				else {
+					while (offset++ < 0)
+						(*this)++;
+				}
+				return (*this);
+			};
+			const_iterator&	operator=(const const_iterator &rhs) {
+				if (this != &rhs) {
+					this->_pos = rhs._pos;
+					this->_ptr = rhs._ptr;
+				}
+				return (*this);
+			};
+			const T&	operator[](int rhs) {
+				return (*(*this + rhs));
 			};
 		};
 
@@ -303,106 +361,138 @@ namespace ft {
 			};
 
 			/* Operators */
-			bool 		operator==(const reverse_iterator &rhs) const {
+			bool 				operator==(const reverse_iterator &rhs) const {
 				if (this->_pos == rhs._pos)
 					return (true);
 				else
 					return (false);
 			};
-			bool 		operator!=(const reverse_iterator &rhs) const {
+			bool 				operator!=(const reverse_iterator &rhs) const {
 				if (this->_pos != rhs._pos)
 					return (true);
 				else
 					return (false);
 			};
-			T&			operator*() {
+			T&					operator*() {
 				return (**(this->_ptr));
 			};
-			T*			operator->() {
+			T*					operator->() {
 				return &(operator*());
 			}
 			reverse_iterator&	operator++() {
-				this->_ptr--;
+				if (this->_pos != -1)
+					this->_ptr--;
 				this->_pos--;
 				return (*this);
 			};
 			reverse_iterator	operator++(int) {
 				reverse_iterator	result(*this);
 
-				this->_ptr--;
+				if (this->_pos != -1)
+					this->_ptr--;
 				this->_pos--;
 				return (result);
 			};
 			reverse_iterator&	operator--() {
-				this->_ptr++;
+				if (this->_pos != -1)
+					this->_ptr++;
 				this->_pos++;
 				return (*this);
 			};
 			reverse_iterator	operator--(int) {
 				reverse_iterator	result(*this);
 
-				this->_ptr++;
+				if (this->_pos != -1)
+					this->_ptr++;
 				this->_pos++;
 				return (result);
 			};
-			reverse_iterator	operator+(const	int &rhs) {
+			reverse_iterator	operator+(int rhs) {
 				int 				offset = 0;
 				reverse_iterator	newIt = *this;
 
-				while (offset++ < rhs)
-					newIt++;
+				if (rhs > 0) {
+					while (offset++ < rhs)
+						newIt++;
+				}
+				else {
+					while (offset-- > rhs)
+						newIt--;
+				}
 				return (newIt);
 			};
-			reverse_iterator	operator-(const	int &rhs) {
-				int 		offset = rhs;
-				reverse_iterator	newIt = *this;
-
-				while (offset-- > 0)
-					newIt--;
-				return (newIt);
+			friend	reverse_iterator	operator+(int lhs, reverse_iterator &rhs){
+				return (rhs + lhs);
 			};
-			size_t				operator-(const reverse_iterator &rhs) const {
-				size_t	diff = 0;
-
-				while (this-- != &rhs)
-					diff++;
-				return (diff);
-			};
-			reverse_iterator	operator<(const reverse_iterator &rhs) const {
-				return (this->_pos > rhs._pos);
-			}
-			reverse_iterator	operator>(const reverse_iterator &rhs) const {
-				return (this->_pos < rhs._pos);
-			}
-			reverse_iterator	operator<=(const reverse_iterator &rhs) const {
-				return (this->_pos >= rhs._pos);
-			}
-			reverse_iterator	operator>=(const reverse_iterator &rhs) const {
-				return (this->_pos <= rhs._pos);
-			}
-			reverse_iterator	operator+=(const int &rhs) {
-				int 				offset = 0;
-				reverse_iterator	newIt = *this;
-
-				while (offset++ < rhs)
-					newIt++;
-				return (newIt);
-			};
-			reverse_iterator	operator-=(const int &rhs) {
+			reverse_iterator	operator-(int rhs) {
 				int 				offset = rhs;
 				reverse_iterator	newIt = *this;
 
-				while (offset-- > 0)
-					newIt--;
+				if (rhs > 0) {
+					while (offset-- > 0)
+						newIt--;
+				}
+				else {
+					while (offset++ < 0)
+						newIt++;
+				}
 				return (newIt);
 			};
-			reverse_iterator&	operator=(const reverse_iterator &rhs) {
-				if (this != &rhs)
-					this->_ptr = rhs._ptr;
+			int					operator-(const reverse_iterator &rhs) const {
+				int					diff = 0;
+				reverse_iterator	cpy = *this;
+
+				while (cpy-- != rhs)
+					diff++;
+				return (diff);
+			};
+			bool				operator<(const reverse_iterator &rhs) const {
+				return (this->_pos > rhs._pos);
+			}
+			bool				operator>(const reverse_iterator &rhs) const {
+				return (this->_pos < rhs._pos);
+			}
+			bool				operator<=(const reverse_iterator &rhs) const {
+				return (this->_pos >= rhs._pos);
+			}
+			bool				operator>=(const reverse_iterator &rhs) const {
+				return (this->_pos <= rhs._pos);
+			}
+			reverse_iterator&	operator+=(int rhs) {
+				int 		offset = 0;
+
+				if (rhs > 0) {
+					while (offset++ < rhs)
+						(*this)++;
+				}
+				else {
+					while (offset-- > rhs)
+						(*this)--;
+				}
 				return (*this);
 			};
-			T&					operator[](const int &rhs) {
-				return (*(this + rhs));
+			reverse_iterator&	operator-=(int rhs) {
+				int 		offset = rhs;
+
+				if (rhs > 0) {
+					while (offset-- > 0)
+						(*this)--;
+				}
+				else {
+					while (offset++ < 0)
+						(*this)++;
+				}
+				return (*this);
+			};
+			reverse_iterator&	operator=(const reverse_iterator &rhs) {
+				if (this != &rhs) {
+					this->_pos = rhs._pos;
+					this->_ptr = rhs._ptr;
+				}
+				return (*this);
+			};
+			T&			operator[](int rhs) {
+				return (*(*this + rhs));
 			};
 		};
 
@@ -440,87 +530,119 @@ namespace ft {
 				return &(operator*());
 			}
 			const_reverse_iterator&	operator++() {
-				this->_ptr--;
+				if (this->_pos != -1)
+					this->_ptr--;
 				this->_pos--;
 				return (*this);
 			};
 			const_reverse_iterator	operator++(int) {
 				const_reverse_iterator	result(*this);
 
-				this->_ptr--;
+				if (this->_pos != -1)
+					this->_ptr--;
 				this->_pos--;
 				return (result);
 			};
 			const_reverse_iterator&	operator--() {
-				this->_ptr++;
+				if (this->_pos != -1)
+					this->_ptr++;
 				this->_pos++;
 				return (*this);
 			};
 			const_reverse_iterator	operator--(int) {
 				const_reverse_iterator	result(*this);
 
-				this->_ptr++;
+				if (this->_pos != -1)
+					this->_ptr++;
 				this->_pos++;
 				return (result);
 			};
-			const_reverse_iterator	operator+(const	int &rhs) {
+			const_reverse_iterator	operator+(int rhs) {
 				int 					offset = 0;
 				const_reverse_iterator	newIt = *this;
 
-				while (offset++ < rhs)
-					newIt++;
+				if (rhs > 0) {
+					while (offset++ < rhs)
+						newIt++;
+				}
+				else {
+					while (offset-- > rhs)
+						newIt--;
+				}
 				return (newIt);
 			};
-			const_reverse_iterator	operator-(const	int &rhs) {
+			friend	const_reverse_iterator	operator+(int lhs, const_reverse_iterator &rhs){
+				return (rhs + lhs);
+			};
+			const_reverse_iterator	operator-(int rhs) {
 				int 					offset = rhs;
 				const_reverse_iterator	newIt = *this;
 
-				while (offset-- > 0)
-					newIt--;
+				if (rhs > 0) {
+					while (offset-- > 0)
+						newIt--;
+				}
+				else {
+					while (offset++ < 0)
+						newIt++;
+				}
 				return (newIt);
 			};
-			size_t					operator-(const const_reverse_iterator &rhs) const {
-				size_t	diff = 0;
+			int						operator-(const const_reverse_iterator &rhs) const {
+				int						diff = 0;
+				const_reverse_iterator	cpy = *this;
 
-				while (this-- != &rhs)
+				while (cpy-- != rhs)
 					diff++;
 				return (diff);
 			};
-			const_reverse_iterator	operator<(const const_reverse_iterator &rhs) const {
+			bool					operator<(const const_reverse_iterator &rhs) const {
 				return (this->_pos > rhs._pos);
 			}
-			const_reverse_iterator	operator>(const const_reverse_iterator &rhs) const{
+			bool					operator>(const const_reverse_iterator &rhs) const {
 				return (this->_pos < rhs._pos);
 			}
-			const_reverse_iterator	operator<=(const const_reverse_iterator &rhs) const {
+			bool					operator<=(const const_reverse_iterator &rhs) const {
 				return (this->_pos >= rhs._pos);
 			}
-			const_reverse_iterator	operator>=(const const_reverse_iterator &rhs) const {
+			bool					operator>=(const const_reverse_iterator &rhs) const {
 				return (this->_pos <= rhs._pos);
 			}
-			const_reverse_iterator	operator+=(const int &rhs) {
-				int 				offset = 0;
-				const_reverse_iterator	newIt = *this;
+			const_reverse_iterator&	operator+=(int rhs) {
+				int 		offset = 0;
 
-				while (offset++ < rhs)
-					newIt++;
-				return (newIt);
-			};
-			const_reverse_iterator	operator-=(const int &rhs) {
-				int 					offset = rhs;
-				const_reverse_iterator	newIt = *this;
-
-				while (offset-- > 0)
-					newIt--;
-				return (newIt);
-			};
-			const_reverse_iterator&	operator=(const const_reverse_iterator &rhs) {
-				if (this != &rhs)
-					this->_ptr = rhs._ptr;
+				if (rhs > 0) {
+					while (offset++ < rhs)
+						(*this)++;
+				}
+				else {
+					while (offset-- > rhs)
+						(*this)--;
+				}
 				return (*this);
 			};
-			const	T&			operator[](const int &rhs) const {
-				return (*(this + rhs));
+			const_reverse_iterator&	operator-=(int rhs) {
+				int 		offset = rhs;
+
+				if (rhs > 0) {
+					while (offset-- > 0)
+						(*this)--;
+				}
+				else {
+					while (offset++ < 0)
+						(*this)++;
+				}
+				return (*this);
+			};
+			const_reverse_iterator&	operator=(const const_reverse_iterator &rhs) {
+				if (this != &rhs) {
+					this->_pos = rhs._pos;
+					this->_ptr = rhs._ptr;
+				}
+				return (*this);
+			};
+			const T&			operator[](int rhs) {
+				return (*(*this + rhs));
 			};
 		};
 
@@ -630,11 +752,11 @@ namespace ft {
 
 		/* Modifiers */
 		template <class InputIterator>
-		void assign (InputIterator first, InputIterator last) {
+		void 		assign (InputIterator first, InputIterator last) {
 			this->clear();
 			this->insert(this->begin(), first, last);
 		};
-		void assign (size_t n, const T& val) {
+		void 		assign (size_t n, const T& val) {
 			this->clear();
 			this->insert(this->begin(), n, val);
 		};
@@ -690,22 +812,29 @@ namespace ft {
 			position = this->insert(position, val);
 		};
 		iterator erase (iterator position) {
-			int			offset = 0;
 			iterator	ret = this->end();
 
-			while (ret-- != position)
-				offset++;
 			while (position != this->end() - 1) {
 				*position = *(position + 1);
 				position++;
 			}
 			this->pop_back();
 
-			return (position);
+			return (ret);
 		};
 		iterator 	erase (iterator first, iterator last) {
-			while (first != last)
-				first = this->erase(first);
+			int			offset = 0;
+			iterator	ret = first;
+
+			offset = last - first;
+			while (first != this->end() - offset) {
+				*first = *(first + offset);
+				first++;
+			}
+			while (offset-- > 0)
+				this->pop_back();
+
+			return (ret);
 		};
 		void 		swap (vector& x) {
 			T		**vector;
