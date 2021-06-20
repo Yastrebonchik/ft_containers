@@ -16,8 +16,12 @@
 # include "list.hpp"
 # include "vector.hpp"
 # include "queue.hpp"
+# include "stack.hpp"
+# include "map.hpp"
+# include "list_tests.hpp"
 # include "vector_tests.hpp"
 # include "queue_tests.hpp"
+# include "stack_tests.hpp"
 # include "vector.hpp"
 # include <exception>
 

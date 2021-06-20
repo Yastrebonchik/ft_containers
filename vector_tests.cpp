@@ -373,6 +373,64 @@ static void 	iterators_tests() {
 
 	name = "<  operator test";
 	check(name, (myrit2 < mycmp4) == (rit2 < cmp4));
+
+	std::cout << CYAN << "Testing for iterators output" <<  RESET << std::endl;
+
+	std::cout << "V1 forward output:" << std::endl;
+
+	for (std::vector<int>::iterator it = v1.begin(); it != v1.end(); ++it) {
+		std::cout << *it << ", ";
+	}
+	std::cout << std::endl;
+
+	std::cout << "myV1 forward output:" << std::endl;
+
+	for (ft::vector<int>::iterator it = myv1.begin(); it != myv1.end(); ++it) {
+		std::cout << *it << ", ";
+	}
+	std::cout << std::endl;
+
+	std::cout << "V1 reverse output:" << std::endl;
+
+	for (std::vector<int>::reverse_iterator it = v1.rbegin(); it != v1.rend(); ++it) {
+		std::cout << *it << ", ";
+	}
+	std::cout << std::endl;
+
+	std::cout << "myV1 reverse output:" << std::endl;
+
+	for (ft::vector<int>::reverse_iterator it = myv1.rbegin(); it != myv1.rend(); ++it) {
+		std::cout << *it << ", ";
+	}
+	std::cout << std::endl;
+
+	std::cout << "V2 const forward output:" << std::endl;
+
+	for (std::vector<int>::const_iterator it = v2.begin(); it != v2.end(); ++it) {
+		std::cout << *it << ", ";
+	}
+	std::cout << std::endl;
+
+	std::cout << "myV2 const forward output:" << std::endl;
+
+	for (ft::vector<int>::const_iterator it = myv2.begin(); it != myv2.end(); ++it) {
+		std::cout << *it << ", ";
+	}
+	std::cout << std::endl;
+
+	std::cout << "V2 const reverse output:" << std::endl;
+
+	for (std::vector<int>::const_reverse_iterator it = v2.rbegin(); it != v2.rend(); ++it) {
+		std::cout << *it << ", ";
+	}
+	std::cout << std::endl;
+
+	std::cout << "myV2 const reverse output:" << std::endl;
+
+	for (ft::vector<int>::const_reverse_iterator it = myv2.rbegin(); it != myv2.rend(); ++it) {
+		std::cout << *it << ", ";
+	}
+	std::cout << std::endl;
 }
 
 static void 	capacity_tests() {

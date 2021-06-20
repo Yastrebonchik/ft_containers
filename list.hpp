@@ -344,7 +344,6 @@ namespace ft {
 		};
 
 		size_t		max_size() const {
-
 			return (std::numeric_limits<size_t>::max() / (sizeof(node)));
 		};
 

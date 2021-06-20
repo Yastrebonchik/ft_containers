@@ -169,6 +169,33 @@ list.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/list.cpp.s
 .PHONY : list.cpp.s
 
+list_tests.o: list_tests.cpp.o
+
+.PHONY : list_tests.o
+
+# target to build an object file
+list_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/list_tests.cpp.o
+.PHONY : list_tests.cpp.o
+
+list_tests.i: list_tests.cpp.i
+
+.PHONY : list_tests.i
+
+# target to preprocess a source file
+list_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/list_tests.cpp.i
+.PHONY : list_tests.cpp.i
+
+list_tests.s: list_tests.cpp.s
+
+.PHONY : list_tests.s
+
+# target to generate assembly for a file
+list_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/list_tests.cpp.s
+.PHONY : list_tests.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -223,32 +250,32 @@ queue_tests.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/queue_tests.cpp.s
 .PHONY : queue_tests.cpp.s
 
-vector.o: vector.cpp.o
+stack_tests.o: stack_tests.cpp.o
 
-.PHONY : vector.o
+.PHONY : stack_tests.o
 
 # target to build an object file
-vector.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/vector.cpp.o
-.PHONY : vector.cpp.o
+stack_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/stack_tests.cpp.o
+.PHONY : stack_tests.cpp.o
 
-vector.i: vector.cpp.i
+stack_tests.i: stack_tests.cpp.i
 
-.PHONY : vector.i
+.PHONY : stack_tests.i
 
 # target to preprocess a source file
-vector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/vector.cpp.i
-.PHONY : vector.cpp.i
+stack_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/stack_tests.cpp.i
+.PHONY : stack_tests.cpp.i
 
-vector.s: vector.cpp.s
+stack_tests.s: stack_tests.cpp.s
 
-.PHONY : vector.s
+.PHONY : stack_tests.s
 
 # target to generate assembly for a file
-vector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/vector.cpp.s
-.PHONY : vector.cpp.s
+stack_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/stack_tests.cpp.s
+.PHONY : stack_tests.cpp.s
 
 vector_tests.o: vector_tests.cpp.o
 
@@ -289,15 +316,18 @@ help:
 	@echo "... list.o"
 	@echo "... list.i"
 	@echo "... list.s"
+	@echo "... list_tests.o"
+	@echo "... list_tests.i"
+	@echo "... list_tests.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... queue_tests.o"
 	@echo "... queue_tests.i"
 	@echo "... queue_tests.s"
-	@echo "... vector.o"
-	@echo "... vector.i"
-	@echo "... vector.s"
+	@echo "... stack_tests.o"
+	@echo "... stack_tests.i"
+	@echo "... stack_tests.s"
 	@echo "... vector_tests.o"
 	@echo "... vector_tests.i"
 	@echo "... vector_tests.s"

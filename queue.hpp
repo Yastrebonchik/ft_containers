@@ -63,36 +63,6 @@ namespace ft {
 			return (lhs._queue >= rhs._queue);
 		};
 	};
-
-//	template <class T, class Container>
-//	bool operator==(const queue<T, Container>& lhs, const queue<T, Container>& rhs) {
-//		return (lhs._queue == rhs.queue);
-//	};
-//
-//	template <class T, class Container>
-//	bool operator!=(const queue<T, Container>& lhs, const queue<T, Container>& rhs) {
-//		return (lhs._queue != rhs.queue);
-//	};
-//
-//	template <class T, class Container>
-//	bool operator<(const queue<T, Container>& lhs, const queue<T, Container>& rhs) {
-//		return(lhs._queue < rhs.queue);
-//	};
-//
-//	template <class T, class Container>
-//	bool operator>(const queue<T, Container>& lhs, const queue<T, Container>& rhs) {
-//		return (lhs._queue > rhs.queue);
-//	};
-//
-//	template <class T, class Container>
-//	bool operator<=(const queue<T, Container>& lhs, const queue<T, Container>& rhs) {
-//		return (lhs._queue <= rhs.queue);
-//	};
-//
-//	template <class T, class Container>
-//	bool operator>=(const queue<T, Container>& lhs, const queue<T, Container>& rhs) {
-//		return (lhs._queue >= rhs.queue);
-//	};
 }
 
 #endif //FT_CONTAINERS_QUEUE_HPP

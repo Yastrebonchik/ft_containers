@@ -491,8 +491,35 @@ int main() {
 
 	*/
 
-	//test_vector();
-	vector_tests();
-	queue_tests();
+	list_tests();
+//	vector_tests();
+//	queue_tests();
+//	stack_tests();
+
+//	std::map<char, int>	m1;
+//	ft::map<char, int>	test;
+//
+//	std::pair<ft::map<char, int>::iterator, bool >	check;
+//	std::pair<std::map<char, int>::iterator, bool >	check1;
+//
+//	check = test.insert(std::pair<char, int>('a', 100));
+//	check = test.insert(std::pair<char, int>('b', 200));
+//	check = test.insert(std::pair<char, int>('c', 300));
+//	check = test.insert(std::pair<char, int>('d', 400));
+//
+//	check1 = m1.insert(std::pair<char, int>('b', 200));
+//	check1 = m1.insert(std::pair<char, int>('a', 100));
+//	check1 = m1.insert(std::pair<char, int>('c', 300));
+//	check1 = m1.insert(std::pair<char, int>('d', 400));
+//
+//	for (ft::map<char, int>::iterator it = test.begin(); it != test.end() ; ++it) {
+//		std::cout << it.first << ", " << it.second << std::endl;
+//	}
+//
+//	std::cout << "------------------------" << std::endl;
+//
+//	for (std::map<char, int>::iterator it = m1.begin(); it != m1.end() ; ++it) {
+//		std::cout << it->first << ", " << it->second << std::endl;
+//	}
 	return 0;
 }

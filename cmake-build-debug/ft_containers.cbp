@@ -91,6 +91,12 @@
 		<Unit filename="/Users/kcedra/ft_containers/list.hpp">
 			<Option target="ft_containers"/>
 		</Unit>
+		<Unit filename="/Users/kcedra/ft_containers/list_tests.cpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/Users/kcedra/ft_containers/list_tests.hpp">
+			<Option target="ft_containers"/>
+		</Unit>
 		<Unit filename="/Users/kcedra/ft_containers/main.cpp">
 			<Option target="ft_containers"/>
 		</Unit>
@@ -106,13 +112,19 @@
 		<Unit filename="/Users/kcedra/ft_containers/queue_tests.hpp">
 			<Option target="ft_containers"/>
 		</Unit>
+		<Unit filename="/Users/kcedra/ft_containers/stack.hpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/Users/kcedra/ft_containers/stack_tests.cpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/Users/kcedra/ft_containers/stack_tests.hpp">
+			<Option target="ft_containers"/>
+		</Unit>
 		<Unit filename="/Users/kcedra/ft_containers/test_headers.hpp">
 			<Option target="ft_containers"/>
 		</Unit>
 		<Unit filename="/Users/kcedra/ft_containers/tests.hpp">
-			<Option target="ft_containers"/>
-		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/vector.cpp">
 			<Option target="ft_containers"/>
 		</Unit>
 		<Unit filename="/Users/kcedra/ft_containers/vector.hpp">
