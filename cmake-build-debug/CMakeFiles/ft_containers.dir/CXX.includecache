@@ -6,45 +6,57 @@
 
 #IncludeRegexTransform: 
 
-/Users/kcedra/ft_containers/algorithm.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/algorithm.hpp
 
-/Users/kcedra/ft_containers/list.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/list.hpp
 limits
 -
 algorithm.hpp
-/Users/kcedra/ft_containers/algorithm.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/algorithm.hpp
 
-/Users/kcedra/ft_containers/list_tests.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/list_tests.cpp
+list_tests.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/list_tests.hpp
+
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/list_tests.hpp
 test_headers.hpp
-/Users/kcedra/ft_containers/test_headers.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/test_headers.hpp
 
-/Users/kcedra/ft_containers/main.cpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/main.cpp
 test_headers.hpp
-/Users/kcedra/ft_containers/test_headers.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/test_headers.hpp
 
-/Users/kcedra/ft_containers/map.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/map.hpp
 functional
 -
 utility
 -
 
-/Users/kcedra/ft_containers/queue.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/queue.hpp
 vector.hpp
-/Users/kcedra/ft_containers/vector.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/vector.hpp
 
-/Users/kcedra/ft_containers/queue_tests.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/queue_tests.cpp
+queue_tests.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/queue_tests.hpp
+
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/queue_tests.hpp
 test_headers.hpp
-/Users/kcedra/ft_containers/test_headers.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/test_headers.hpp
 
-/Users/kcedra/ft_containers/stack.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/stack.hpp
 vector.hpp
-/Users/kcedra/ft_containers/vector.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/vector.hpp
 
-/Users/kcedra/ft_containers/stack_tests.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/stack_tests.cpp
+stack_tests.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/stack_tests.hpp
+
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/stack_tests.hpp
 test_headers.hpp
-/Users/kcedra/ft_containers/test_headers.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/test_headers.hpp
 
-/Users/kcedra/ft_containers/test_headers.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/test_headers.hpp
 iostream
 -
 list
@@ -62,39 +74,43 @@ cmath
 string
 -
 list.hpp
-/Users/kcedra/ft_containers/list.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/list.hpp
 vector.hpp
-/Users/kcedra/ft_containers/vector.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/vector.hpp
 queue.hpp
-/Users/kcedra/ft_containers/queue.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/queue.hpp
 stack.hpp
-/Users/kcedra/ft_containers/stack.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/stack.hpp
 map.hpp
-/Users/kcedra/ft_containers/map.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/map.hpp
 list_tests.hpp
-/Users/kcedra/ft_containers/list_tests.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/list_tests.hpp
 vector_tests.hpp
-/Users/kcedra/ft_containers/vector_tests.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/vector_tests.hpp
 queue_tests.hpp
-/Users/kcedra/ft_containers/queue_tests.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/queue_tests.hpp
 stack_tests.hpp
-/Users/kcedra/ft_containers/stack_tests.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/stack_tests.hpp
 vector.hpp
-/Users/kcedra/ft_containers/vector.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/vector.hpp
 exception
 -
 
-/Users/kcedra/ft_containers/vector.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/vector.hpp
 limits
 -
 algorithm.hpp
-/Users/kcedra/ft_containers/algorithm.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/algorithm.hpp
 cmath
 -
 stdexcept
 -
 
-/Users/kcedra/ft_containers/vector_tests.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/vector_tests.cpp
+vector_tests.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/vector_tests.hpp
+
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/vector_tests.hpp
 test_headers.hpp
-/Users/kcedra/ft_containers/test_headers.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/test_headers.hpp
 

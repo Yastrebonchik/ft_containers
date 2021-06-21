@@ -21,6 +21,22 @@ namespace ft {
 		typedef Compare 								key_compare;
 		typedef std::pair<const key_type, mapped_type>	value_type;
 
+		class	value_compare
+		{
+			friend  map;
+		protected:
+			Compare comp;
+			value_compare (Compare c) : comp(c) {
+			};
+		public:
+			typedef bool 		result_type;
+			typedef value_type	first_argument_type;
+			typedef value_type	second_argument_type;
+			bool operator() (const value_type& x, const value_type& y) const {
+				return comp(x.first, y.first);
+			}
+		};
+
 	private:
 		class node {
 		public:
@@ -32,25 +48,31 @@ namespace ft {
 			node(const key_type& key, const T& val) : val(std::pair<key_type, mapped_type>(key, val)), next(nullptr), prev(nullptr) {};
 			node(node &src) : val(src.val), next(nullptr), prev(nullptr) {};
 		};
-		node		*_Mnode;
-		size_t		_len;
-		key_compare	_comp;
+		node			*_Mnode;
+		size_t			_len;
+		key_compare		_comp;
+		value_compare	_valComp;
 
 	public:
-		map(const key_compare& comp = key_compare()) : _Mnode(new node()), _len(0), _comp(comp) {
+		map(const key_compare& comp = key_compare()) : _Mnode(new node()), _len(0), _comp(comp), _valComp(comp) {
 			this->_Mnode->next = this->_Mnode;
 			this->_Mnode->prev = this->_Mnode;
 		};
 		template <class InputIterator>
-		map (InputIterator first, InputIterator last, const key_compare& comp = key_compare()) : _Mnode(new node()), _len(0), _comp(comp) {
+		map (InputIterator first, InputIterator last, const key_compare& comp = key_compare()) : _Mnode(new node()), _len(0), _comp(comp), _valComp(comp) {
 			this->insert(first, last);
 		};
-		map (const map& x) : _Mnode(new node()), _len(0), _comp(x._comp) {
+		map (const map& x) : _Mnode(new node()), _len(0), _comp(x._comp), _valComp(x._comp) {
 			this->insert(x.begin(), x.end());
 		};
 		~map() {
 			this->clear();
 			delete this->_Mnode;
+		};
+
+		map& operator= (const map& x) {
+			this->clear();
+			this->insert(x.begin(), x.end());
 		};
 
 		class iterator {
@@ -202,12 +224,9 @@ namespace ft {
 				this->_current = this->_current->next;
 				return (result);
 			};
-			T&					operator*() {
-				return (this->_current->value);
+			value_type*			operator->() {
+				return (&(this->_current->val));
 			};
-			T*					operator->() const {
-				return &(operator*());
-			}
 			bool 				operator!=(const reverse_iterator &rhs) {
 				if (this->_current != rhs._current)
 					return (true);
@@ -262,12 +281,9 @@ namespace ft {
 				this->_current = this->_current->next;
 				return (result);
 			};
-			const T&				operator*() {
-				return (this->_current->value);
+			const value_type*		operator->() {
+				return (&(this->_current->val));
 			};
-			const T*				operator->() const {
-				return &(operator*());
-			}
 			bool 					operator!=(const const_reverse_iterator &rhs) {
 				if (this->_current != rhs._current)
 					return (true);
@@ -328,6 +344,7 @@ namespace ft {
 			return (std::numeric_limits<size_t>::max() / (sizeof(node)));
 		};
 
+		/* Element access */
 		mapped_type& operator[] (const key_type& k) {
 			iterator	it = this->begin();
 
@@ -340,7 +357,8 @@ namespace ft {
 			return (it->second);
 		};
 
-		std::pair<iterator,bool>	insert(const value_type& val) {
+		/* Modifiers */
+		std::pair<iterator,bool>		insert(const value_type& val) {
 			iterator					it = this->begin();
 			std::pair<iterator, bool>	ret;
 			node						*nNode;
@@ -375,7 +393,7 @@ namespace ft {
 			return (ret);
 		};
 
-		iterator	insert (iterator position, const value_type& val) {
+		iterator						insert (iterator position, const value_type& val) {
 			iterator	ret;
 			node		*nNode = new node(val.first, val.second);
 
@@ -409,7 +427,7 @@ namespace ft {
 			return (ret);
 		};
 		template <class InputIterator>
-		void 		insert (InputIterator first, InputIterator last) {
+		void 							insert (InputIterator first, InputIterator last) {
 			std::pair<key_type, mapped_type>	pair;
 			while (first != last) {
 				pair = std::make_pair(first->first, first->second);
@@ -418,7 +436,7 @@ namespace ft {
 			}
 		};
 
-		void 		erase (iterator position) {
+		void 							erase (iterator position) {
 			if (position != this->_Mnode) {
 				position._current->next->prev = position._current->prev;
 				position._current->prev->next = position._current->next;
@@ -426,7 +444,7 @@ namespace ft {
 				this->_len--;
 			}
 		};
-		size_t		erase (const key_type& k) {
+		size_t							erase (const key_type& k) {
 			iterator	it = this->begin();
 
 			while (it != this->end()) {
@@ -438,7 +456,7 @@ namespace ft {
 			}
 			return (0);
 		};
-		void		erase (iterator first, iterator last) {
+		void							erase (iterator first, iterator last) {
 			iterator	it;
 
 			while (first != last) {
@@ -447,7 +465,7 @@ namespace ft {
 				first = it;
 			}
 		};
-		void swap (map& x) {
+		void 							swap (map& x) {
 			size_t	nlen;
 			node	*nNode;
 
@@ -458,9 +476,121 @@ namespace ft {
 			this->_Mnode = x._Mnode;
 			x._Mnode = nNode;
 		};
-		void 		clear() {
+		void 							clear() {
 			this->erase(this->begin(), this->end());
 		}
+
+		/* Observers */
+		key_compare						key_comp() const {
+			return (this->_comp);
+		};
+		value_compare					value_comp() const {
+			return (this->_valComp);
+		};
+
+		/* Operations */
+		iterator 						find (const key_type& k) {
+			iterator	it = this->begin();
+
+			while (it != this->end()) {
+				if (it._current->val.first == k)
+					break;
+				it++;
+			}
+			return (it);
+		};
+		const_iterator					find (const key_type& k) const {
+			const_iterator	it = this->begin();
+
+			while (it != this->end()) {
+				if (it._current->val.first == k)
+					break;
+				it++;
+			}
+			return (it);
+		};
+		size_t 							count (const key_type& k) const {
+			iterator	it = this->begin();
+
+			while (it != this->end()) {
+				if (it._current->val.first == k)
+					return (1);
+				it++;
+			}
+			return (0);
+		};
+		iterator						lower_bound (const key_type& k) {
+			iterator	it = this->begin();
+
+			while (it != this->end()) {
+				if (!this->_comp(it._current->val.first, k))
+					break;
+				it++;
+			}
+			return (it);
+		};
+		const_iterator					lower_bound (const key_type& k) const {
+			const_iterator	it = this->begin();
+
+			while (it != this->end()) {
+				if (!this->_comp(it._current->val.first, k))
+					break;
+				it++;
+			}
+			return (it);
+		};
+		iterator						upper_bound (const key_type& k) {
+			iterator	it = this->begin();
+
+			while (it != this->end()) {
+				if (this->_comp(k, it._current->val.first))
+					break;
+				it++;
+			}
+			return (it);
+		};
+		const_iterator					upper_bound (const key_type& k) const {
+			const_iterator	it = this->begin();
+
+			while (it != this->end()) {
+				if (this->_comp(k, it._current->val.first))
+					break;
+				it++;
+			}
+			return (it);
+		};
+		std::pair<iterator,iterator>	equal_range (const key_type& k) {
+			iterator	it = this->begin();
+			iterator	ret;
+
+			while (it != this->end()) {
+				if (!this->_comp(it._current->val.first, k)) {
+					if (it._current->val.first == k) {
+						ret = it++;
+						return (std::make_pair(ret, it));
+					}
+				}
+				it++;
+				ret = it;
+			}
+			return (std::make_pair(ret, it));
+		};
+		std::pair<const_iterator,const_iterator> equal_range (const key_type& k) const {
+			const_iterator	it = this->begin();
+			const_iterator	ret;
+
+			while (it != this->end()) {
+				if (!this->_comp(it._current->val.first, k)) {
+					if (it._current->val.first == k) {
+						ret = it++;
+						return (std::make_pair(ret, it));
+					}
+				}
+				it++;
+				ret = it;
+			}
+			return (std::make_pair(ret, it));
+		};
 	};
 }
 
