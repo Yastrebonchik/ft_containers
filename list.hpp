@@ -467,9 +467,9 @@ namespace ft {
 				ret._current = position._current->next;
 				position._current->next->prev = position._current->prev;
 				position._current->prev->next = position._current->next;
+				this->_len--;
 				delete position._current;
 			}
-			this->_len--;
 			return (ret);
 		};
 		iterator	erase(iterator first, iterator last) {
@@ -560,7 +560,6 @@ namespace ft {
 					cmp = it++;;
 			}
 		};
-		// Где-то течет эта функция.
 		template <class BinaryPredicate>
 		void unique (BinaryPredicate binary_pred) {
 			list<T>::iterator it = this->begin();
