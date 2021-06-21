@@ -13,6 +13,35 @@ static void 	check(std::string title, bool value) {
 		std::cout << title << ": " << margin << FAIL << std::endl;
 }
 
+static bool 	mycomparison (double first, double second) {
+	return ( int(first)<int(second) );
+}
+
+static bool		single_digit (const int& value) {
+	return (value<10);
+}
+
+static bool		compare_nocase (const std::string& first, const std::string& second)
+{
+	unsigned int i=0;
+	while ( (i<first.length()) && (i<second.length()) )
+	{
+		if (tolower(first[i])<tolower(second[i])) return true;
+		else if (tolower(first[i])>tolower(second[i])) return false;
+		++i;
+	}
+	return ( first.length() < second.length() );
+}
+
+static bool 	same_integral_part (double first, double second)
+{ return ( int(first)==int(second) ); }
+
+// a binary predicate implemented as a class:
+struct is_near {
+	bool operator() (double first, double second)
+	{ return (fabs(first-second)<5.0); }
+};
+
 static void 	constructor_tests() {
 	std::list<std::string>	l1;
 	ft::list<std::string>	myl1;
@@ -401,11 +430,11 @@ static void 	relational_operators_test() {
 }
 
 void 	operation_tests() {
-	std::list<int> l1(12, -423), l2(4, 4124);
-	std::list<int>::iterator it1;
-	ft::list<int> myl1((size_t)12, -423), myl2((size_t)4, 4124);
-	ft::list<int>::iterator myit1;
-	std::string 			name;
+	std::list<int> 				l1(12, -423), l2(4, 4124);
+	std::list<int>::iterator 	it1;
+	ft::list<int> 				myl1((size_t)12, -423), myl2((size_t)4, 4124);
+	ft::list<int>::iterator 	myit1;
+	std::string 				name;
 
 	std::cout << GREEN << "-------Operations operators tests--------" << RESET << std::endl;
 
@@ -430,10 +459,118 @@ void 	operation_tests() {
 	myl2.splice (myit1, myl1, myl1.begin(), myl1.end());
 	check(name, myl2 == l2);
 
-	name = "Remove element range test";
+	name = "Remove element test";
 	l2.remove(4124);
 	myl2.remove(4124);
 	check(name, myl2 == l2);
+
+	name = "Sort test";
+	l1.push_back(10);
+	l1.push_back(9);
+	l1.push_back(8);
+	l1.push_back(7);
+	l1.push_back(6);
+	l1.push_back(5);
+	l1.push_back(4);
+	l1.push_back(3);
+	l1.push_back(2);
+	l1.push_back(1);
+	myl1.push_back(10);
+	myl1.push_back(9);
+	myl1.push_back(8);
+	myl1.push_back(7);
+	myl1.push_back(6);
+	myl1.push_back(5);
+	myl1.push_back(4);
+	myl1.push_back(3);
+	myl1.push_back(2);
+	myl1.push_back(1);
+	l1.sort();
+	myl1.sort();
+	check(name, myl1 == l1);
+
+	name = "Sort with comp test";
+	std::list<std::string>				list;
+	std::list<std::string>::iterator	it;
+	ft::list<std::string>				mylist;
+	ft::list<std::string>::iterator		myit;
+
+	list.push_back ("one");
+	list.push_back ("two");
+	list.push_back ("Three");
+	mylist.push_back ("one");
+	mylist.push_back ("two");
+	mylist.push_back ("Three");
+
+	list.sort(compare_nocase);
+	mylist.sort(compare_nocase);
+	check(name, mylist == list);
+
+	name = "Removeif test";
+	l1.remove_if(single_digit);
+	myl1.remove_if(single_digit);
+	check(name, myl1 == l1);
+
+
+	double				mydoubles[]={ 12.15,  2.72, 73.0,  12.77,  3.14, 12.77, 73.35, 72.25, 15.3,  72.25 };
+	std::list<double>	dlist(mydoubles,mydoubles+10);
+	ft::list<double>	mydlist(mydoubles, mydoubles+10);
+
+	name = "Unique with test";
+	dlist.sort();
+	dlist.unique();
+	mydlist.sort();
+	mydlist.unique();
+	check(name, mydlist == dlist);
+
+	name = "Unique with pred test";
+	dlist.unique(same_integral_part);
+	dlist.unique(is_near());
+	mydlist.unique(same_integral_part);
+	mydlist.unique(is_near());
+	check(name, mydlist == dlist);
+
+	name = "Reverse test";
+	dlist.reverse();
+	mydlist.reverse();
+	check(name, mydlist == dlist);
+
+	std::list<double> 	first, second;
+	ft::list<double>	myfirst, mysecond;
+
+	first.push_back (3.1);
+	first.push_back (2.2);
+	first.push_back (2.9);
+	myfirst.push_back (3.1);
+	myfirst.push_back (2.2);
+	myfirst.push_back (2.9);
+
+	second.push_back (3.7);
+	second.push_back (7.1);
+	second.push_back (1.4);
+	mysecond.push_back (3.7);
+	mysecond.push_back (7.1);
+	mysecond.push_back (1.4);
+
+	first.sort();
+	second.sort();
+	myfirst.sort();
+	mysecond.sort();
+
+	first.merge(second);
+	myfirst.merge(mysecond);
+	name = "Merge test";
+
+	//first.push_back(2.1);
+	check(name, myfirst == first);
+
+	second.push_back (2.1);
+	mysecond.push_back(2.1);
+
+	name = "Merge with comp test";
+	first.merge(second, mycomparison);
+	myfirst.merge(mysecond, mycomparison);
+	check(name, myfirst == first);
 }
 
 void 	list_tests() {

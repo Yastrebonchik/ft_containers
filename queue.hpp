@@ -14,6 +14,8 @@ namespace ft {
 		Container	_queue;
 	public:
 		queue(const Container& cntr = Container()) {
+			if (!cntr.empty())
+				this->_queue = cntr;
 		};
 		~queue() {};
 

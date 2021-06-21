@@ -22,6 +22,10 @@ list_tests.hpp
 test_headers.hpp
 /Users/kcedra/ft_containers/test_headers.hpp
 
+/Users/kcedra/ft_containers/main.cpp
+test_headers.hpp
+/Users/kcedra/ft_containers/test_headers.hpp
+
 /Users/kcedra/ft_containers/map.hpp
 functional
 -
@@ -32,6 +36,10 @@ utility
 vector.hpp
 /Users/kcedra/ft_containers/vector.hpp
 
+/Users/kcedra/ft_containers/queue_tests.cpp
+queue_tests.hpp
+/Users/kcedra/ft_containers/queue_tests.hpp
+
 /Users/kcedra/ft_containers/queue_tests.hpp
 test_headers.hpp
 /Users/kcedra/ft_containers/test_headers.hpp
@@ -39,6 +47,10 @@ test_headers.hpp
 /Users/kcedra/ft_containers/stack.hpp
 vector.hpp
 /Users/kcedra/ft_containers/vector.hpp
+
+/Users/kcedra/ft_containers/stack_tests.cpp
+stack_tests.hpp
+/Users/kcedra/ft_containers/stack_tests.hpp
 
 /Users/kcedra/ft_containers/stack_tests.hpp
 test_headers.hpp
@@ -93,6 +105,10 @@ cmath
 -
 stdexcept
 -
+
+/Users/kcedra/ft_containers/vector_tests.cpp
+vector_tests.hpp
+/Users/kcedra/ft_containers/vector_tests.hpp
 
 /Users/kcedra/ft_containers/vector_tests.hpp
 test_headers.hpp

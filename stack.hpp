@@ -14,6 +14,8 @@ namespace ft {
 		Container	_stack;
 	public:
 		stack(const Container& cntr = Container()) {
+			if (!cntr.empty())
+				this->_stack = cntr;
 		};
 		~stack() {};
 

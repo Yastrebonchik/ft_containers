@@ -44,47 +44,54 @@ namespace ft {
 		};
 
 		class iterator {
+		private:
+			std::pair<key_type, mapped_type>*	_val;
 		public:
 			node		*_current;
-			key_type	*first = &_current->_first;
-			mapped_type *second = &_current->_second;
 
 			iterator() : _current(nullptr) {
 			};
-			iterator(node *Node) : _current(Node) {
+			iterator(node *Node) : _val(new std::pair<key_type, mapped_type>(Node->_first, Node->_second)), _current(Node) {
 			};
-			iterator(const iterator &src) : _current(src._current) {
+			iterator(const iterator &src) : _val(src._val), _current(src._current) {
 			};
 			~iterator() {
+				if (this->_val != nullptr)
+					delete this->_val;
 			};
 
 			/* Operators */
 			iterator&		operator++() {
 				this->_current = this->_current->next;
+				this->_val->first = this->_current->_first;
+				this->_val->second = this->_current->_second;
 				return (*this);
 			};
 			iterator		operator++(int) {
 				iterator	result(*this);
 
 				this->_current = this->_current->next;
+				this->_val->first = this->_current->_first;
+				this->_val->second = this->_current->_second;
 				return (result);
 			};
 			iterator&		operator--() {
 				this->_current = this->_current->prev;
+				this->_val->first = this->_current->_first;
+				this->_val->second = this->_current->_second;
 				return (*this);
 			};
 			iterator		operator--(int) {
 				iterator	result(*this);
 
 				this->_current = this->_current->prev;
+				this->_val->first = this->_current->_first;
+				this->_val->second = this->_current->_second;
 				return (result);
 			};
-//			key_type&		operator->() {
-//				return (this->_current->_first);
-//			};
-//			mapped_type&	operator->() {
-//				return (this->_current->_second);
-//			}
+			std::pair<key_type, mapped_type>*	operator->() {
+				return (this->_val);
+			};
 			bool 			operator!=(const iterator &rhs) {
 				if (this->_current != rhs._current)
 					return (true);
@@ -342,7 +349,7 @@ namespace ft {
 		std::pair<iterator,bool>	insert(const value_type& val) {
 			iterator					it = this->begin();
 			std::pair<iterator, bool>	ret;
-			node						*nNode = new node(val.first, val.second);
+			node						*nNode;
 
 			while (it != this->end()) {
 				if (this->_comp(it._current->_first, val.first))
@@ -352,6 +359,7 @@ namespace ft {
 					if (it._current->_first == val.first)
 						ret.second = false;
 					else {
+						nNode = new node(val.first, val.second);
 						nNode->next = it._current;
 						nNode->prev = it._current->prev;
 						it._current->prev->next = nNode;
@@ -359,9 +367,10 @@ namespace ft {
 						ret.second = true;
 						this->_len += 1;
 					}
+					return (ret);
 				}
-				return (ret);
 			}
+			nNode = new node(val.first, val.second);
 			nNode->next = it._current;
 			nNode->prev = it._current->prev;
 			it._current->prev->next = nNode;
@@ -374,19 +383,19 @@ namespace ft {
 
 		iterator insert (iterator position, const value_type& val) {
 			iterator	ret;
-			node		nNode(val->first, val->second);
+			node		*nNode = new node(val.first, val.second);
 
 			if (!this->_comp(position->first, position->second))
 				position = this->begin();
 			while (position != this->end()) {
-				if (this->_comp(position->first, val->first))
+				if (this->_comp(position->first, val.first))
 					position++;
 				else {
-					if (position->first == val->first)
+					if (position->first == val.first)
 						ret = position;
 					else {
-						nNode._first = val->first;
-						nNode._second = val->second;
+						nNode->_first = val.first;
+						nNode->_second = val.second;
 						nNode->next = position._current;
 						nNode->prev = position._current->prev;
 						position._current->prev->next = nNode;
@@ -394,17 +403,18 @@ namespace ft {
 						this->_len += 1;
 						ret = position._current->prev;
 					}
+					return (ret);
 				}
-				nNode._first = val->first;
-				nNode._second = val->second;
-				nNode->next = position._current;
-				nNode->prev = position._current->prev;
-				position._current->prev->next = nNode;
-				position._current->prev = nNode;
-				this->_len += 1;
-				ret = position._current->prev;
-				return (ret);
 			}
+			nNode->_first = val.first;
+			nNode->_second = val.second;
+			nNode->next = position._current;
+			nNode->prev = position._current->prev;
+			position._current->prev->next = nNode;
+			position._current->prev = nNode;
+			this->_len += 1;
+			ret = position._current->prev;
+			return (ret);
 		};
 
 	};
