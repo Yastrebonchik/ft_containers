@@ -24,14 +24,14 @@ namespace ft {
 		typedef Compare 								key_compare;
 		typedef std::pair<const key_type, mapped_type>	value_type;
 
+	private:
+		public:
 		class	value_compare
 		{
-			friend  map;
-		protected:
+		public:
 			Compare comp;
 			value_compare (Compare c) : comp(c) {
 			};
-		public:
 			typedef bool 		result_type;
 			typedef value_type	first_argument_type;
 			typedef value_type	second_argument_type;
@@ -39,8 +39,6 @@ namespace ft {
 				return comp(x.first, y.first);
 			}
 		};
-
-	private:
 		class node {
 		public:
 			value_type	val;

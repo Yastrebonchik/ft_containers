@@ -83,9 +83,6 @@
 		<Unit filename="/Users/kcedra/ft_containers/algorithm.hpp">
 			<Option target="ft_containers"/>
 		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/list.cpp">
-			<Option target="ft_containers"/>
-		</Unit>
 		<Unit filename="/Users/kcedra/ft_containers/list.hpp">
 			<Option target="ft_containers"/>
 		</Unit>
@@ -126,9 +123,6 @@
 			<Option target="ft_containers"/>
 		</Unit>
 		<Unit filename="/Users/kcedra/ft_containers/test_headers.hpp">
-			<Option target="ft_containers"/>
-		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/tests.hpp">
 			<Option target="ft_containers"/>
 		</Unit>
 		<Unit filename="/Users/kcedra/ft_containers/vector.hpp">

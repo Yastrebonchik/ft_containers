@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ft_containers.dir/list.cpp.o"
   "CMakeFiles/ft_containers.dir/list_tests.cpp.o"
   "CMakeFiles/ft_containers.dir/main.cpp.o"
   "CMakeFiles/ft_containers.dir/map_tests.cpp.o"

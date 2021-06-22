@@ -110,56 +110,56 @@ static void 	iterators_tests() {
 
 	std::cout << "M1 forward output:" << std::endl;
 
-	for (std::map<int, std::string, ft::more<int>>::iterator it = m1.begin(); it != m1.end(); ++it) {
+	for (std::map<int, std::string, ft::more<int> >::iterator it = m1.begin(); it != m1.end(); ++it) {
 		std::cout << "Key = " << it->first << ", and value = " << it->second << std::endl;
 	}
 	std::cout << std::endl;
 
 	std::cout << "myM1 forward output:" << std::endl;
 
-	for (ft::map<int, std::string, ft::more<int>>::iterator it = mym1.begin(); it != mym1.end(); ++it) {
+	for (ft::map<int, std::string, ft::more<int> >::iterator it = mym1.begin(); it != mym1.end(); ++it) {
 		std::cout << "Key = " << it->first << ", and value = " << it->second << std::endl;
 	}
 	std::cout << std::endl;
 
 	std::cout << "M1 reverse output:" << std::endl;
 
-	for (std::map<int, std::string, ft::more<int>>::reverse_iterator it = m1.rbegin(); it != m1.rend(); ++it) {
+	for (std::map<int, std::string, ft::more<int> >::reverse_iterator it = m1.rbegin(); it != m1.rend(); ++it) {
 		std::cout << "Key = " << it->first << ", and value = " << it->second << std::endl;
 	}
 	std::cout << std::endl;
 
 	std::cout << "myM1 reverse output:" << std::endl;
 
-	for (ft::map<int, std::string, ft::more<int>>::reverse_iterator it = mym1.rbegin(); it != mym1.rend(); ++it) {
+	for (ft::map<int, std::string, ft::more<int> >::reverse_iterator it = mym1.rbegin(); it != mym1.rend(); ++it) {
 		std::cout << "Key = " << it->first << ", and value = " << it->second << std::endl;
 	}
 	std::cout << std::endl;
 
 	std::cout << "M2 const forward output:" << std::endl;
 
-	for (std::map<int, std::string, ft::more<int>>::const_iterator it = cpm1.begin(); it != cpm1.end(); ++it) {
+	for (std::map<int, std::string, ft::more<int> >::const_iterator it = cpm1.begin(); it != cpm1.end(); ++it) {
 		std::cout << "Key = " << it->first << ", and value = " << it->second << std::endl;
 	}
 	std::cout << std::endl;
 
 	std::cout << "myM2 const forward output:" << std::endl;
 
-	for (ft::map<int, std::string, ft::more<int>>::const_iterator it = mycpm1.begin(); it != mycpm1.end(); ++it) {
+	for (ft::map<int, std::string, ft::more<int> >::const_iterator it = mycpm1.begin(); it != mycpm1.end(); ++it) {
 		std::cout << "Key = " << it->first << ", and value = " << it->second << std::endl;
 	}
 	std::cout << std::endl;
 
 	std::cout << "M2 const reverse output:" << std::endl;
 
-	for (std::map<int, std::string, ft::more<int>>::const_reverse_iterator it = cpm1.rbegin(); it != cpm1.rend(); ++it) {
+	for (std::map<int, std::string, ft::more<int> >::const_reverse_iterator it = cpm1.rbegin(); it != cpm1.rend(); ++it) {
 		std::cout << "Key = " << it->first << ", and value = " << it->second << std::endl;
 	}
 	std::cout << std::endl;
 
 	std::cout << "myM2 const reverse output:" << std::endl;
 
-	for (ft::map<int, std::string, ft::more<int>>::const_reverse_iterator it = mycpm1.rbegin(); it != mycpm1.rend(); ++it) {
+	for (ft::map<int, std::string, ft::more<int> >::const_reverse_iterator it = mycpm1.rbegin(); it != mycpm1.rend(); ++it) {
 		std::cout << "Key = " << it->first << ", and value = " << it->second << std::endl;
 	}
 	std::cout << std::endl;
