@@ -165,380 +165,289 @@ static void 	iterators_tests() {
 	std::cout << std::endl;
 }
 
-//static void 	capacity_tests() {
-//	std::vector<int>			l1;
-//	ft::vector<int>				myl1;
-//	std::string					name = "Size test";
-//
-//	l1.push_back(1);
-//	l1.push_back(2);
-//	l1.push_back(3);
-//	l1.push_back(4);
-//	l1.push_back(5);
-//	l1.push_back(6);
-//	l1.push_back(7);
-//	l1.push_back(8);
-//	l1.push_back(9);
-//	l1.push_back(10);
-//	myl1.push_back(1);
-//	myl1.push_back(2);
-//	myl1.push_back(3);
-//	myl1.push_back(4);
-//	myl1.push_back(5);
-//	myl1.push_back(6);
-//	myl1.push_back(7);
-//	myl1.push_back(8);
-//	myl1.push_back(9);
-//	myl1.push_back(10);
-//
-//	std::cout << GREEN << "-------------Capacity tests--------------" << RESET << std::endl;
-//
-//	check(name, myl1.size() == l1.size());
-//
-//	name = "Max size test";
-//	check(name, myl1.max_size() == l1.max_size());
-//
-//	name = "Capacity test";
-//	check(name, myl1.capacity() == l1.capacity());
-//}
-//
-//static void 	element_access_tests() {
-//	std::list<std::string>	l1;
-//	ft::list<std::string>	myl1;
-//	std::string				name;
-//
-//	l1.push_back("1");
-//	l1.push_back("2");
-//	l1.push_back("3");
-//	l1.push_back("4");
-//	l1.push_back("5");
-//	l1.push_back("6");
-//	l1.push_back("7");
-//	l1.push_back("8");
-//	l1.push_back("9");
-//	l1.push_back("10");
-//	myl1.push_back("1");
-//	myl1.push_back("2");
-//	myl1.push_back("3");
-//	myl1.push_back("4");
-//	myl1.push_back("5");
-//	myl1.push_back("6");
-//	myl1.push_back("7");
-//	myl1.push_back("8");
-//	myl1.push_back("9");
-//	myl1.push_back("10");
-//
-//	const std::list<std::string>	l2(l1);
-//	const ft::list<std::string>		myl2(myl1);
-//
-//	std::cout << GREEN << "----------Element access tests-----------" << RESET << std::endl;
-//
-//	name = "Front test";
-//	check(name, myl1.front() == l1.front());
-//
-//	name = "Const front test";
-//	check(name, myl2.front() == l2.front());
-//
-//	name = "Back test";
-//	check(name, myl1.back() == l1.back());
-//
-//	name = "Const back test";
-//	check(name, myl2.back() == l2.back());
-//}
-//
-//static void 	modifiers_test() {
-//	std::list<std::string>		l1;
-//	ft::list<std::string>		myl1;
-//	std::vector<std::string>	v(15, "Bondrewd");
-//	std::string					name = "Pushback test";
-//
-//	std::cout << GREEN << "------------Modifiers tests--------------" << RESET << std::endl;
-//
-//	l1.push_back("1");
-//	myl1.push_back("1");
-//
-//	check(name, myl1 == l1);
-//
-//	l1.push_back("2");
-//	myl1.push_back("2");
-//	l1.push_back("3");
-//	myl1.push_back("3");
-//
-//	l1.pop_back();
-//	myl1.pop_back();
-//	name = "Pop back test";
-//	check(name, myl1 == l1);
-//
-//	l1.push_front("1");
-//	myl1.push_front("1");
-//	name = "Pushfront test";
-//	check(name, myl1 == l1);
-//
-//	l1.pop_front();
-//	myl1.pop_front();
-//	name = "Pop front test";
-//	check(name, myl1 == l1);
-//
-//	name = "Assign range test";
-//	l1.assign(l1.begin(), l1.end());
-//	myl1.assign(l1.begin(), l1.end());
-//	check(name, myl1 == l1);
-//
-//	name = "Assign fill test";
-//	l1.assign(10, "Reg");
-//	myl1.assign(10, "Reg");
-//	check(name, myl1 == l1);
-//
-//	std::list<std::string>::iterator	it1 = l1.begin();
-//	ft::list<std::string>::iterator		myit1 = myl1.begin();
-//
-//	it1++;
-//	it1++;
-//	it1++;
-//	myit1++;
-//	myit1++;
-//	myit1++;
-//
-//	name = "Insert 1 element test";
-//	l1.insert(it1, "Rico");
-//	myl1.insert(myit1, "Rico");
-//	check(name, myl1 == l1);
-//
-//	name = "Insert fill test";
-//	l1.insert(it1, 5, "Rico");
-//	myl1.insert(myit1, 5, "Rico");
-//	check(name, myl1 == l1);
-//
-//	name = "Insert range test";
-//	l1.insert(it1, v.begin(), v.end());
-//	myl1.insert(myit1, v.begin(), v.end());
-//	check(name, myl1 == l1);
-//
-//	it1 = l1.begin();
-//	myit1 = myl1.begin();
-//	it1++;
-//	it1++;
-//	it1++;
-//	myit1++;
-//	myit1++;
-//	myit1++;
-//
-//	name = "Erase 1 element test";
-//	it1 = l1.erase(it1);
-//	myit1 = myl1.erase(myit1);
-//	check(name, myl1 == l1 && *it1 == *myit1);
-//
-//
-//	name = "Erase range of elements test";
-//	std::list<std::string>::iterator	erit1 = l1.erase(it1, l1.end());
-//	ft::list<std::string>::iterator		myerit1 = myl1.erase(myit1, myl1.end());
-//
-//	check(name, myl1 == l1 && *--erit1 == *--myerit1);
-//
-//	name = "Resize test with n < capacity";
-//	l1.resize(8);
-//	myl1.resize(8);
-//	check(name, myl1 == l1);
-//
-//	name = "Resize test with n == capacity";
-//	l1.resize(8);
-//	myl1.resize(8);
-//	check(name, myl1 == l1);
-//
-//	name = "Resize test with n > capacity";
-//	l1.resize(19);
-//	myl1.resize(19);
-//	check(name, myl1 == l1);
-//
-//	std::list<std::string>	v2;
-//	ft::list<std::string>	myv2;
-//
-//	v2.swap(l1);
-//	myv2.swap(myl1);
-//	name = "Swap test";
-//	check(name, myl1 == l1 && myv2 == v2);
-//
-//	name = "Clear test";
-//	l1.clear();
-//	myl1.clear();
-//	check(name, myl1 == l1);
-//}
-//
-//static void 	relational_operators_test() {
-//	std::list<int>	foo(3,100);   // three ints with a value of 100
-//	std::list<int>	bar(2,200);   // two ints with a value of 200
-//	std::list<int>	foo2(3,100);
-//	std::list<int>	bar2(2,200);
-//	ft::list<int>	myfoo((size_t)3,100);
-//	ft::list<int>	myfoo2((size_t)3,100);
-//	ft::list<int>	mybar((size_t)2,200);
-//	ft::list<int>	mybar2((size_t)2,200);
-//	std::string					name;
-//
-//	std::cout << GREEN << "-------Relational operators tests--------" << RESET << std::endl;
-//
-//	name = "== test test";
-//	check(name, (foo == foo2) && (myfoo == myfoo2));
-//
-//	name = "!= test test";
-//	check(name, (foo != bar) && (myfoo != mybar));
-//
-//	name = "< test test";
-//	check(name, (foo < bar) && (myfoo < mybar));
-//
-//	name = "<= test test";
-//	check(name, (foo <= bar) && (myfoo <= mybar));
-//
-//	name = "> test test";
-//	check(name, !((foo > bar) && (myfoo > mybar)));
-//
-//	name = ">= test test";
-//	check(name, !((foo >= bar) && (myfoo >= mybar)));
-//}
-//
-//void 	operation_tests() {
-//	std::list<int> 				l1(12, -423), l2(4, 4124);
-//	std::list<int>::iterator 	it1;
-//	ft::list<int> 				myl1((size_t)12, -423), myl2((size_t)4, 4124);
-//	ft::list<int>::iterator 	myit1;
-//	std::string 				name;
-//
-//	std::cout << GREEN << "-------Operations operators tests--------" << RESET << std::endl;
-//
-//	name = "Splice entire list test";
-//	it1 = l1.begin();
-//	l1.splice (it1, l2);
-//	myit1 = myl1.begin();
-//	myl1.splice (myit1, myl2);
-//	check(name, myl1 == l1);
-//
-//	name = "Splice single element test";
-//	it1 = l2.begin();
-//	l2.splice (it1, l1, l1.begin());
-//	myit1 = myl2.begin();
-//	myl2.splice (myit1, myl1, myl1.begin());
-//	check(name, myl2 == l2);
-//
-//	name = "Splice element range test";
-//	it1 = l2.begin();
-//	l2.splice (it1, l1, l1.begin(), l1.end());
-//	myit1 = myl2.begin();
-//	myl2.splice (myit1, myl1, myl1.begin(), myl1.end());
-//	check(name, myl2 == l2);
-//
-//	name = "Remove element test";
-//	l2.remove(4124);
-//	myl2.remove(4124);
-//	check(name, myl2 == l2);
-//
-//	name = "Sort test";
-//	l1.push_back(10);
-//	l1.push_back(9);
-//	l1.push_back(8);
-//	l1.push_back(7);
-//	l1.push_back(6);
-//	l1.push_back(5);
-//	l1.push_back(4);
-//	l1.push_back(3);
-//	l1.push_back(2);
-//	l1.push_back(1);
-//	myl1.push_back(10);
-//	myl1.push_back(9);
-//	myl1.push_back(8);
-//	myl1.push_back(7);
-//	myl1.push_back(6);
-//	myl1.push_back(5);
-//	myl1.push_back(4);
-//	myl1.push_back(3);
-//	myl1.push_back(2);
-//	myl1.push_back(1);
-//	l1.sort();
-//	myl1.sort();
-//	check(name, myl1 == l1);
-//
-//	name = "Sort with comp test";
-//	std::list<std::string>				list;
-//	std::list<std::string>::iterator	it;
-//	ft::list<std::string>				mylist;
-//	ft::list<std::string>::iterator		myit;
-//
-//	list.push_back ("one");
-//	list.push_back ("two");
-//	list.push_back ("Three");
-//	mylist.push_back ("one");
-//	mylist.push_back ("two");
-//	mylist.push_back ("Three");
-//
-//	list.sort(compare_nocase);
-//	mylist.sort(compare_nocase);
-//	check(name, mylist == list);
-//
-//	name = "Removeif test";
-//	l1.remove_if(single_digit);
-//	myl1.remove_if(single_digit);
-//	check(name, myl1 == l1);
-//
-//
-//	double				mydoubles[]={ 12.15,  2.72, 73.0,  12.77,  3.14, 12.77, 73.35, 72.25, 15.3,  72.25 };
-//	std::list<double>	dlist(mydoubles,mydoubles+10);
-//	ft::list<double>	mydlist(mydoubles, mydoubles+10);
-//
-//	name = "Unique with test";
-//	dlist.sort();
-//	dlist.unique();
-//	mydlist.sort();
-//	mydlist.unique();
-//	check(name, mydlist == dlist);
-//
-//	name = "Unique with pred test";
-//	dlist.unique(same_integral_part);
-//	dlist.unique(is_near());
-//	mydlist.unique(same_integral_part);
-//	mydlist.unique(is_near());
-//	check(name, mydlist == dlist);
-//
-//	name = "Reverse test";
-//	dlist.reverse();
-//	mydlist.reverse();
-//	check(name, mydlist == dlist);
-//
-//	std::list<double> 	first, second;
-//	ft::list<double>	myfirst, mysecond;
-//
-//	first.push_back (3.1);
-//	first.push_back (2.2);
-//	first.push_back (2.9);
-//	myfirst.push_back (3.1);
-//	myfirst.push_back (2.2);
-//	myfirst.push_back (2.9);
-//
-//	second.push_back (3.7);
-//	second.push_back (7.1);
-//	second.push_back (1.4);
-//	mysecond.push_back (3.7);
-//	mysecond.push_back (7.1);
-//	mysecond.push_back (1.4);
-//
-//	first.sort();
-//	second.sort();
-//	myfirst.sort();
-//	mysecond.sort();
-//
-//	first.merge(second);
-//	myfirst.merge(mysecond);
-//	name = "Merge test";
-//
-//	//first.push_back(2.1);
-//	check(name, myfirst == first);
-//
-//	second.push_back (2.1);
-//	mysecond.push_back(2.1);
-//
-//	name = "Merge with comp test";
-//	first.merge(second, mycomparison);
-//	myfirst.merge(mysecond, mycomparison);
-//	check(name, myfirst == first);
-//}
+static void 	capacity_tests() {
+	std::map<char,int>	first;
+	ft::map<char, int>	myfirst;
+	std::string 		name;
+
+	first['a']=10;
+	first['b']=30;
+	first['c']=50;
+	first['d']=70;
+	myfirst['a']=10;
+	myfirst['b']=30;
+	myfirst['c']=50;
+	myfirst['d']=70;
+
+	std::cout << GREEN << "-------------Capacity tests--------------" << RESET << std::endl;
+
+	name = "Size test";
+	check(name, myfirst.size() == first.size());
+
+	name = "Max size test";
+	check(name, myfirst.max_size() == first.max_size());
+
+}
+
+static void 	element_access_tests() {
+	std::map<char,int>	first;
+	ft::map<char, int>	myfirst;
+	std::string 		name;
+
+	std::cout << GREEN << "----------Element access tests-----------" << RESET << std::endl;
+
+	first['a']=10;
+	first['b']=30;
+	first['c']=50;
+	first['d']=70;
+	myfirst['a']=10;
+	myfirst['b']=30;
+	myfirst['c']=50;
+	myfirst['d']=70;
+
+	const std::map<char,int>		second(first);
+	const ft::map<char, int>		mysecond(myfirst);
+
+	name = "Operator [] adding element test";
+	check(name, myfirst == first);
+
+
+	first['a']=20;
+	first['b']=40;
+	first['c']=60;
+	first['d']=80;
+	myfirst['a']=20;
+	myfirst['b']=40;
+	myfirst['c']=60;
+	myfirst['d']=80;
+
+	name = "Operator [] access element test";
+	check(name, myfirst == first);
+}
+
+static void 	modifiers_test() {
+	std::map<char,int>	m1;
+	ft::map<char, int>	mym1;
+	std::string			name;
+
+	std::cout << GREEN << "------------Modifiers tests--------------" << RESET << std::endl;
+
+	std::pair<std::map<char,int>::iterator,bool>	ret;
+	std::pair<ft::map<char,int>::iterator,bool>		myret;
+
+	ret = m1.insert ( std::pair<char,int>('a',100) );
+	ret = m1.insert ( std::pair<char,int>('z',200) );
+	myret = mym1.insert(std::pair<char,int>('a',100));
+	myret = mym1.insert(std::pair<char,int>('z',200));
+
+	name = "Insert with pair returned == true test";
+	check(name, mym1 == m1 && ret.second == true && myret.second == true);
+
+
+	ret = m1.insert ( std::pair<char,int>('z',500) );
+	myret = mym1.insert(std::pair<char,int>('z',500));
+
+	name = "Insert with pair ret == false test";
+	check(name, mym1 == m1 && ret.second == false && myret.second == false);
+
+	std::map<char,int>::iterator	it = m1.begin();
+	ft::map<char,int>::iterator		myit = mym1.begin();
+
+	m1.insert (it, std::pair<char,int>('b',300));  // max efficiency inserting
+	m1.insert (it, std::pair<char,int>('c',400));  // no max efficiency inserting
+	mym1.insert(myit, std::pair<char,int>('b',300));
+	mym1.insert(myit, std::pair<char,int>('c',400));
+
+	name = "Insert with iterator position test";
+	check(name, mym1 == m1);
+
+	std::map<char,int>	anothermap;
+	ft::map<char, int>	myanothermap;
+	anothermap.insert(m1.begin(),m1.find('c'));
+	myanothermap.insert(m1.begin(), m1.find('c'));
+
+	name = "Insert range test";
+	check(name, myanothermap == anothermap);
+
+	it = m1.find('b');
+	m1.erase(it);
+	myit = mym1.find('b');
+	mym1.erase(myit);
+
+	name = "Erase iterator test";
+	check(name, mym1 == m1);
+
+	name = "Erase with key test";
+	check(name, mym1.erase('a') == m1.erase('a') && mym1 == m1);
+
+	m1['w'] = 50;
+	m1['x'] = 100;
+	m1['y'] = 150;
+	m1['z'] = 200;
+	mym1['w'] = 50;
+	mym1['x'] = 100;
+	mym1['y'] = 150;
+	mym1['z'] = 200;
+
+	name = "Erase range test";
+	m1.erase(m1.find('w'), m1.find('y'));
+	mym1.erase(mym1.find('w'), mym1.find('y'));
+	check(name, mym1 == m1);
+
+	name = "Swap test";
+	m1.swap(anothermap);
+	mym1.swap(myanothermap);
+	check(name, mym1 == m1 && myanothermap == anothermap);
+
+	name = "Clear test";
+	m1.clear();
+	mym1.clear();
+	check(name, mym1 == m1);
+}
+
+static void	observers_tests() {
+	std::map<char,int>				m1;
+	std::map<char,int>::key_compare comp = m1.key_comp();
+	std::map<char, int>::iterator 	it;
+	ft::map<char, int>				mym1;
+	ft::map<char, int>::key_compare mycomp = mym1.key_comp();
+	ft::map<char, int>::iterator	myit;
+	std::string 					name;
+
+	std::cout << GREEN << "------------Observers tests--------------" << RESET << std::endl;
+	m1['a']=100;
+	m1['b']=200;
+	m1['c']=300;
+	m1['d']=400;
+	m1['e']=500;
+	m1['f']=600;
+	mym1['a']=100;
+	mym1['b']=200;
+	mym1['c']=300;
+	mym1['d']=400;
+	mym1['e']=500;
+	mym1['f']=600;
+
+	it = m1.begin();
+	myit = mym1.begin();
+
+	while (comp(it->first, 'd'))
+		it++;
+	while (mycomp(myit->first, 'd'))
+		myit++;
+
+	name = "Key comparison object test";
+	check(name, myit->first == it->first && myit->second == it->second);
+
+	name = "Value comparison object test";
+
+	std::pair<char,int>	highest = *m1.rbegin();
+	std::pair<char,int>	myhighest = *mym1.rbegin();
+
+	do {
+		std::cout << it->first << " => " << it->second << '\n';
+	} while ( m1.value_comp()(*it++, highest) );
+	std::cout << "---------------------------------" << std::endl;
+	do {
+		std::cout << myit->first << " => " << myit->second << '\n';
+	} while ( mym1.value_comp()(*myit++, myhighest) );
+
+	name = "Value comparison object test";
+	check(name, (--myit)->first == (--it)->first && (--myit)->second == (--it)->second);
+}
+
+static void	operation_tests() {
+	std::map<char,int>				m1;
+	std::map<char,int>::iterator	it;
+	ft::map<char,int>				mym1;
+	ft::map<char,int>::iterator		myit;
+	std::string 					name;
+
+	std::cout << GREEN << "------------Operations tests--------------" << RESET << std::endl;
+
+	m1['a']=50;
+	m1['b']=100;
+	m1['c']=150;
+	m1['d']=200;
+	m1['e']=250;
+	m1['f']=300;
+	m1['h']=350;
+	m1['i']=400;
+	mym1['a']=50;
+	mym1['b']=100;
+	mym1['c']=150;
+	mym1['d']=200;
+	mym1['e']=250;
+	mym1['f']=300;
+	mym1['h']=350;
+	mym1['i']=400;
+
+	it = m1.find('b');
+	myit = mym1.find('b');
+
+	const std::map<char,int>			cm1(m1);
+	std::map<char,int>::const_iterator	cit;
+	const ft::map<char,int>				mycm1(mym1);
+	ft::map<char,int>::const_iterator	mycit;
+
+	name = "Find test";
+	check(name, myit->first == it->first && myit->second == it->second);
+
+	cit = cm1.find('c');
+	mycit = mycm1.find('c');
+
+	name = "Const find test";
+	check(name, mycit->first == cit->first && mycit->second == cit->second);
+
+	name = "Count test";
+	check(name, mym1.count('d') == m1.count('d'));
+
+	std::map<char,int>::iterator	itlow,itup;
+	ft::map<char, int>::iterator	myitlow, myitup;
+
+	itlow = m1.lower_bound ('g');
+	itup = m1.upper_bound('g');
+	myitlow = mym1.lower_bound('g');
+	myitup = mym1.upper_bound('g');
+
+	name = "Lower bound test";
+	check(name, myitlow->first == itlow->first && myitlow->second == itlow->second);
+
+	name = "Upper bound test";
+	check(name, myitup->first == itup->first && myitup->second == itup->second);
+
+	std::map<char,int>::const_iterator	citlow,citup;
+	ft::map<char, int>::const_iterator	mycitlow, mycitup;
+
+	citlow = cm1.lower_bound ('g');
+	citup = cm1.upper_bound('g');
+	mycitlow = mycm1.lower_bound('g');
+	mycitup = mycm1.upper_bound('g');
+
+	name = "Const Lower bound test";
+	check(name, mycitlow->first == citlow->first && mycitlow->second == citlow->second);
+
+	name = "Const Upper bound test";
+	check(name, mycitup->first == citup->first && mycitup->second == citup->second);
+
+	std::pair<std::map<char, int>::iterator, std::map<char, int>::iterator>	pair(m1.equal_range('b'));
+	std::pair<ft::map<char, int>::iterator, ft::map<char, int>::iterator>	mypair(mym1.equal_range('b'));
+
+	std::map<char, int>			eqrangem(pair.first, pair.second);
+	ft::map<char, int>			myeqrangem(mypair.first, mypair.second);
+
+	name = "Equal range test";
+	check(name, myeqrangem == eqrangem);
+
+	std::pair<std::map<char, int>::const_iterator, std::map<char, int>::const_iterator>	cpair(cm1.equal_range('b'));
+	std::pair<ft::map<char, int>::const_iterator, ft::map<char, int>::const_iterator>	mycpair(mycm1.equal_range('b'));
+
+	const std::map<char, int>	ceqrangem(cpair.first, cpair.second);
+	const ft::map<char, int>	myceqrangem(mycpair.first, mycpair.second);
+
+	name = "Const Equal range test";
+	check(name, myceqrangem.begin()->first == ceqrangem.begin()->first && myceqrangem.begin()->second == ceqrangem.begin()->second);
+};
 
 void	map_tests() {
 	std::cout << BLUE << std::endl;
@@ -550,9 +459,9 @@ void	map_tests() {
 	constructor_tests();
 	copy_operator_tests();
 	iterators_tests();
-//	capacity_tests();
-//	element_access_tests();
-//	modifiers_test();
-//	operation_tests();
-//	relational_operators_test();
+	capacity_tests();
+	element_access_tests();
+	modifiers_test();
+	observers_tests();
+	operation_tests();
 }

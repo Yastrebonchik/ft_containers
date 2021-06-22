@@ -429,7 +429,7 @@ static void 	relational_operators_test() {
 	check(name, !((foo >= bar) && (myfoo >= mybar)));
 }
 
-void 	operation_tests() {
+static void		operation_tests() {
 	std::list<int> 				l1(12, -423), l2(4, 4124);
 	std::list<int>::iterator 	it1;
 	ft::list<int> 				myl1((size_t)12, -423), myl2((size_t)4, 4124);

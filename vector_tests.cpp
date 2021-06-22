@@ -487,19 +487,16 @@ static void 	capacity_tests() {
 	name = "Reserve test with n < capacity";
 	v1.reserve(15);
 	myv1.reserve(15);
-	//std::cout << "My = " << myv1.capacity() << " and std: " << v1.capacity() << std::endl;
 	check(name, myv1.capacity() == v1.capacity());
 
 	name = "Reserve test with n == capacity";
 	v1.reserve(32);
 	myv1.reserve(32);
-	//std::cout << "My = " << myv1.capacity() << " and std: " << v1.capacity() << std::endl;
 	check(name, myv1.capacity() == v1.capacity());
 
 	name = "Reserve test with n > capacity";
 	v1.reserve(64);
 	myv1.reserve(49);
-	//std::cout << "My = " << myv1.capacity() << " and std: " << v1.capacity() << std::endl;
 	check(name, myv1.capacity() >= v1.capacity());
 }
 

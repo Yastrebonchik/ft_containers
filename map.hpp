@@ -119,6 +119,9 @@ namespace ft {
 			value_type*		operator->() {
 				return (&(this->_current->val));
 			};
+			value_type&		operator*() {
+				return ((this->_current->val));
+			};
 			bool 			operator!=(const iterator &rhs) {
 				if (this->_current != rhs._current)
 					return (true);
@@ -234,6 +237,9 @@ namespace ft {
 			value_type*			operator->() {
 				return (&(this->_current->val));
 			};
+			value_type&		operator*() {
+				return ((this->_current->val));
+			};
 			bool 				operator!=(const reverse_iterator &rhs) {
 				if (this->_current != rhs._current)
 					return (true);
@@ -348,7 +354,7 @@ namespace ft {
 		};
 
 		size_t		max_size() const {
-			return (std::numeric_limits<size_t>::max() / (sizeof(node)));
+			return (std::numeric_limits<size_t>::max() / (sizeof(node) * 5/3));
 		};
 
 		/* Element access */
@@ -517,7 +523,7 @@ namespace ft {
 			return (it);
 		};
 		size_t 							count (const key_type& k) const {
-			iterator	it = this->begin();
+			const_iterator	it = this->begin();
 
 			while (it != this->end()) {
 				if (it._current->val.first == k)
