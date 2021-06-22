@@ -464,59 +464,60 @@ int main() {
 	//vector_tests();
 	//queue_tests();
 	//stack_tests();
+	map_tests();
 
-	std::map<char, int>	m1;
-	ft::map<char, int>	test, test2;
-
-	std::pair<ft::map<char, int>::iterator, bool >	check;
-	std::pair<std::map<char, int>::iterator, bool >	check1;
-	ft::map<char, int>::iterator					it1 = test.begin();
-
-	check = test.insert(std::pair<char, int>('a', 100));
-	check = test.insert(std::pair<char, int>('b', 200));
-	check = test.insert(std::pair<char, int>('c', 300));
-	check = test.insert(std::pair<char, int>('d', 400));
-
-	check1 = m1.insert(std::pair<char, int>('z', 200));
-	check1 = m1.insert(std::pair<char, int>('y', 100));
-	check1 = m1.insert(std::pair<char, int>('x', 300));
-	check1 = m1.insert(std::pair<char, int>('w', 400));
-
-	std::cout << test['a'] << std::endl;
-	std::cout << test['e'] << std::endl;
-	test['e'] = 500;
-	std::cout << test['e'] << std::endl;
-
-	it1++;
-	it1++;
-	it1++;
-	test.insert(std::pair<char, int>('f', 100));
-
-	test.insert(m1.begin(), m1.end());
-
-	//test.erase(++test.begin(),--test.end());
-	test.erase('w');
-	test2.swap(test);
-	std::cout << test.size() << std::endl;
-	for (ft::map<char, int>::iterator it = test.begin(); it != test.end() ; ++it) {
-		it->second = it->second * 10;
-		std::cout << it->first << ", " << it->second << std::endl;
-	}
-
-	std::cout << "-----------------------------------------------" << std::endl;
-	for (ft::map<char, int>::iterator it = test.begin(); it != test.end() ; ++it) {
-		std::cout << it->first << ", " << it->second << std::endl;
-	}
-
-	std::cout << "-----------------------------------------------" << std::endl;
-	for (ft::map<char, int>::iterator it = test2.begin(); it != test2.end() ; ++it) {
-		std::cout << it->first << ", " << it->second << std::endl;
-	}
-
-	std::cout << "------------------------" << std::endl;
-
-	for (std::map<char, int>::iterator it = m1.begin(); it != m1.end() ; ++it) {
-		std::cout << it->first << ", " << it->second << std::endl;
-	}
+//	std::map<char, int>	m1;
+//	ft::map<char, int>	test, test2;
+//
+//	std::pair<ft::map<char, int>::iterator, bool >	check;
+//	std::pair<std::map<char, int>::iterator, bool >	check1;
+//	ft::map<char, int>::iterator					it1 = test.begin();
+//
+//	check = test.insert(std::pair<char, int>('a', 100));
+//	check = test.insert(std::pair<char, int>('b', 200));
+//	check = test.insert(std::pair<char, int>('c', 300));
+//	check = test.insert(std::pair<char, int>('d', 400));
+//
+//	check1 = m1.insert(std::pair<char, int>('z', 200));
+//	check1 = m1.insert(std::pair<char, int>('y', 100));
+//	check1 = m1.insert(std::pair<char, int>('x', 300));
+//	check1 = m1.insert(std::pair<char, int>('w', 400));
+//
+//	std::cout << test['a'] << std::endl;
+//	std::cout << test['e'] << std::endl;
+//	test['e'] = 500;
+//	std::cout << test['e'] << std::endl;
+//
+//	it1++;
+//	it1++;
+//	it1++;
+//	test.insert(std::pair<char, int>('f', 100));
+//
+//	test.insert(m1.begin(), m1.end());
+//
+//	//test.erase(++test.begin(),--test.end());
+//	test.erase('w');
+//	test2.swap(test);
+//	std::cout << test.size() << std::endl;
+//	for (ft::map<char, int>::iterator it = test.begin(); it != test.end() ; ++it) {
+//		it->second = it->second * 10;
+//		std::cout << it->first << ", " << it->second << std::endl;
+//	}
+//
+//	std::cout << "-----------------------------------------------" << std::endl;
+//	for (ft::map<char, int>::iterator it = test.begin(); it != test.end() ; ++it) {
+//		std::cout << it->first << ", " << it->second << std::endl;
+//	}
+//
+//	std::cout << "-----------------------------------------------" << std::endl;
+//	for (ft::map<char, int>::iterator it = test2.begin(); it != test2.end() ; ++it) {
+//		std::cout << it->first << ", " << it->second << std::endl;
+//	}
+//
+//	std::cout << "------------------------" << std::endl;
+//
+//	for (std::map<char, int>::iterator it = m1.begin(); it != m1.end() ; ++it) {
+//		std::cout << it->first << ", " << it->second << std::endl;
+//	}
 	return 0;
 }

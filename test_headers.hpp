@@ -22,6 +22,7 @@
 # include "vector_tests.hpp"
 # include "queue_tests.hpp"
 # include "stack_tests.hpp"
+# include "map_tests.hpp"
 # include "vector.hpp"
 # include <exception>
 

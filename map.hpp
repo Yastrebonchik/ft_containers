@@ -12,6 +12,9 @@ namespace ft {
 	template <class T> struct less : std::binary_function <T,T,bool> {
 		bool operator() (const T& x, const T& y) const {return x<y;}
 	};
+	template <class T> struct more : std::binary_function <T,T,bool> {
+		bool operator() (const T& x, const T& y) const {return x>y;}
+	};
 
 	template< class Key, class T, class Compare = less<Key> >
 	class map {
@@ -60,9 +63,13 @@ namespace ft {
 		};
 		template <class InputIterator>
 		map (InputIterator first, InputIterator last, const key_compare& comp = key_compare()) : _Mnode(new node()), _len(0), _comp(comp), _valComp(comp) {
+			this->_Mnode->next = this->_Mnode;
+			this->_Mnode->prev = this->_Mnode;
 			this->insert(first, last);
 		};
 		map (const map& x) : _Mnode(new node()), _len(0), _comp(x._comp), _valComp(x._comp) {
+			this->_Mnode->next = this->_Mnode;
+			this->_Mnode->prev = this->_Mnode;
 			this->insert(x.begin(), x.end());
 		};
 		~map() {

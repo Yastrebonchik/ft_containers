@@ -13,6 +13,7 @@ CMakeFiles/ft_containers.dir/list_tests.cpp.o
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/list_tests.cpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/list_tests.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/map.hpp
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/map_tests.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/queue.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/queue_tests.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/stack.hpp
@@ -26,6 +27,21 @@ CMakeFiles/ft_containers.dir/main.cpp.o
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/list_tests.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/main.cpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/map.hpp
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/map_tests.hpp
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/queue.hpp
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/queue_tests.hpp
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/stack.hpp
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/stack_tests.hpp
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/test_headers.hpp
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/vector.hpp
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/vector_tests.hpp
+CMakeFiles/ft_containers.dir/map_tests.cpp.o
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/algorithm.hpp
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/list.hpp
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/list_tests.hpp
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/map.hpp
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/map_tests.cpp
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/map_tests.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/queue.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/queue_tests.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/stack.hpp
@@ -38,6 +54,7 @@ CMakeFiles/ft_containers.dir/queue_tests.cpp.o
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/list.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/list_tests.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/map.hpp
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/map_tests.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/queue.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/queue_tests.cpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/queue_tests.hpp
@@ -51,6 +68,7 @@ CMakeFiles/ft_containers.dir/stack_tests.cpp.o
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/list.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/list_tests.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/map.hpp
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/map_tests.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/queue.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/queue_tests.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/stack.hpp
@@ -64,6 +82,7 @@ CMakeFiles/ft_containers.dir/vector_tests.cpp.o
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/list.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/list_tests.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/map.hpp
+ /mnt/c/Users/Alexander/CLionProjects/ft_containers/map_tests.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/queue.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/queue_tests.hpp
  /mnt/c/Users/Alexander/CLionProjects/ft_containers/stack.hpp

@@ -105,6 +105,12 @@
 		<Unit filename="/mnt/c/Users/Alexander/CLionProjects/ft_containers/map.hpp">
 			<Option target="ft_containers"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/Alexander/CLionProjects/ft_containers/map_tests.cpp">
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Alexander/CLionProjects/ft_containers/map_tests.hpp">
+			<Option target="ft_containers"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/Alexander/CLionProjects/ft_containers/queue.hpp">
 			<Option target="ft_containers"/>
 		</Unit>

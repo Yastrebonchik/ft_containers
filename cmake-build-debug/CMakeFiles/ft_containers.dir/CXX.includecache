@@ -14,15 +14,7 @@ limits
 algorithm.hpp
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/algorithm.hpp
 
-/mnt/c/Users/Alexander/CLionProjects/ft_containers/list_tests.cpp
-list_tests.hpp
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/list_tests.hpp
-
-/mnt/c/Users/Alexander/CLionProjects/ft_containers/list_tests.hpp
-test_headers.hpp
-/mnt/c/Users/Alexander/CLionProjects/ft_containers/test_headers.hpp
-
-/mnt/c/Users/Alexander/CLionProjects/ft_containers/main.cpp
 test_headers.hpp
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/test_headers.hpp
 
@@ -32,13 +24,17 @@ functional
 utility
 -
 
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/map_tests.cpp
+map_tests.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/map_tests.hpp
+
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/map_tests.hpp
+test_headers.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/test_headers.hpp
+
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/queue.hpp
 vector.hpp
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/vector.hpp
-
-/mnt/c/Users/Alexander/CLionProjects/ft_containers/queue_tests.cpp
-queue_tests.hpp
-/mnt/c/Users/Alexander/CLionProjects/ft_containers/queue_tests.hpp
 
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/queue_tests.hpp
 test_headers.hpp
@@ -47,10 +43,6 @@ test_headers.hpp
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/stack.hpp
 vector.hpp
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/vector.hpp
-
-/mnt/c/Users/Alexander/CLionProjects/ft_containers/stack_tests.cpp
-stack_tests.hpp
-/mnt/c/Users/Alexander/CLionProjects/ft_containers/stack_tests.hpp
 
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/stack_tests.hpp
 test_headers.hpp
@@ -91,6 +83,8 @@ queue_tests.hpp
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/queue_tests.hpp
 stack_tests.hpp
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/stack_tests.hpp
+map_tests.hpp
+/mnt/c/Users/Alexander/CLionProjects/ft_containers/map_tests.hpp
 vector.hpp
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/vector.hpp
 exception
@@ -105,10 +99,6 @@ cmath
 -
 stdexcept
 -
-
-/mnt/c/Users/Alexander/CLionProjects/ft_containers/vector_tests.cpp
-vector_tests.hpp
-/mnt/c/Users/Alexander/CLionProjects/ft_containers/vector_tests.hpp
 
 /mnt/c/Users/Alexander/CLionProjects/ft_containers/vector_tests.hpp
 test_headers.hpp

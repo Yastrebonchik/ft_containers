@@ -204,6 +204,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+map_tests.o: map_tests.cpp.o
+
+.PHONY : map_tests.o
+
+# target to build an object file
+map_tests.cpp.o:
+	$(MAKE) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/map_tests.cpp.o
+.PHONY : map_tests.cpp.o
+
+map_tests.i: map_tests.cpp.i
+
+.PHONY : map_tests.i
+
+# target to preprocess a source file
+map_tests.cpp.i:
+	$(MAKE) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/map_tests.cpp.i
+.PHONY : map_tests.cpp.i
+
+map_tests.s: map_tests.cpp.s
+
+.PHONY : map_tests.s
+
+# target to generate assembly for a file
+map_tests.cpp.s:
+	$(MAKE) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/map_tests.cpp.s
+.PHONY : map_tests.cpp.s
+
 queue_tests.o: queue_tests.cpp.o
 
 .PHONY : queue_tests.o
@@ -303,6 +330,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... map_tests.o"
+	@echo "... map_tests.i"
+	@echo "... map_tests.s"
 	@echo "... queue_tests.o"
 	@echo "... queue_tests.i"
 	@echo "... queue_tests.s"
