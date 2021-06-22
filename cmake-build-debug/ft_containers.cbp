@@ -44,7 +44,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/kcedra/ft_containers/."/>
+					<Add directory="/Users/kcedra/ft_containers/includes"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -65,7 +65,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/kcedra/ft_containers/."/>
+					<Add directory="/Users/kcedra/ft_containers/includes"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -80,58 +80,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/kcedra/ft_containers/algorithm.hpp">
+		<Unit filename="/Users/kcedra/ft_containers/srcs/list_tests.cpp">
 			<Option target="ft_containers"/>
 		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/list.hpp">
+		<Unit filename="/Users/kcedra/ft_containers/srcs/main.cpp">
 			<Option target="ft_containers"/>
 		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/list_tests.cpp">
+		<Unit filename="/Users/kcedra/ft_containers/srcs/map_tests.cpp">
 			<Option target="ft_containers"/>
 		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/list_tests.hpp">
+		<Unit filename="/Users/kcedra/ft_containers/srcs/queue_tests.cpp">
 			<Option target="ft_containers"/>
 		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/main.cpp">
+		<Unit filename="/Users/kcedra/ft_containers/srcs/stack_tests.cpp">
 			<Option target="ft_containers"/>
 		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/map.hpp">
-			<Option target="ft_containers"/>
-		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/map_tests.cpp">
-			<Option target="ft_containers"/>
-		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/map_tests.hpp">
-			<Option target="ft_containers"/>
-		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/queue.hpp">
-			<Option target="ft_containers"/>
-		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/queue_tests.cpp">
-			<Option target="ft_containers"/>
-		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/queue_tests.hpp">
-			<Option target="ft_containers"/>
-		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/stack.hpp">
-			<Option target="ft_containers"/>
-		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/stack_tests.cpp">
-			<Option target="ft_containers"/>
-		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/stack_tests.hpp">
-			<Option target="ft_containers"/>
-		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/test_headers.hpp">
-			<Option target="ft_containers"/>
-		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/vector.hpp">
-			<Option target="ft_containers"/>
-		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/vector_tests.cpp">
-			<Option target="ft_containers"/>
-		</Unit>
-		<Unit filename="/Users/kcedra/ft_containers/vector_tests.hpp">
+		<Unit filename="/Users/kcedra/ft_containers/srcs/vector_tests.cpp">
 			<Option target="ft_containers"/>
 		</Unit>
 		<Unit filename="/Users/kcedra/ft_containers/CMakeLists.txt">

@@ -3,6 +3,6 @@ project(ft_containers)
 
 set(CMAKE_CXX_STANDARD 98)
 
-include_directories(.)
+include_directories(includes)
 
-add_executable(ft_containers main.cpp list.hpp vector.hpp map.hpp algorithm.hpp vector_tests.cpp vector_tests.hpp queue.hpp queue_tests.cpp queue_tests.hpp test_headers.hpp stack.hpp stack_tests.cpp stack_tests.hpp list_tests.cpp list_tests.hpp map_tests.cpp map_tests.hpp)
+add_executable(ft_containers srcs/main.cpp srcs/vector_tests.cpp srcs/queue_tests.cpp srcs/stack_tests.cpp srcs/list_tests.cpp srcs/map_tests.cpp)

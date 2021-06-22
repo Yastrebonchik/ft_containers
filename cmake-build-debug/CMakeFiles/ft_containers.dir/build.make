@@ -76,102 +76,102 @@ include CMakeFiles/ft_containers.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ft_containers.dir/flags.make
 
-CMakeFiles/ft_containers.dir/main.cpp.o: CMakeFiles/ft_containers.dir/flags.make
-CMakeFiles/ft_containers.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kcedra/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ft_containers.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/main.cpp.o -c /Users/kcedra/ft_containers/main.cpp
+CMakeFiles/ft_containers.dir/srcs/main.cpp.o: CMakeFiles/ft_containers.dir/flags.make
+CMakeFiles/ft_containers.dir/srcs/main.cpp.o: ../srcs/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kcedra/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ft_containers.dir/srcs/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/srcs/main.cpp.o -c /Users/kcedra/ft_containers/srcs/main.cpp
 
-CMakeFiles/ft_containers.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kcedra/ft_containers/main.cpp > CMakeFiles/ft_containers.dir/main.cpp.i
+CMakeFiles/ft_containers.dir/srcs/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/srcs/main.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kcedra/ft_containers/srcs/main.cpp > CMakeFiles/ft_containers.dir/srcs/main.cpp.i
 
-CMakeFiles/ft_containers.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kcedra/ft_containers/main.cpp -o CMakeFiles/ft_containers.dir/main.cpp.s
+CMakeFiles/ft_containers.dir/srcs/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/srcs/main.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kcedra/ft_containers/srcs/main.cpp -o CMakeFiles/ft_containers.dir/srcs/main.cpp.s
 
-CMakeFiles/ft_containers.dir/vector_tests.cpp.o: CMakeFiles/ft_containers.dir/flags.make
-CMakeFiles/ft_containers.dir/vector_tests.cpp.o: ../vector_tests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kcedra/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ft_containers.dir/vector_tests.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/vector_tests.cpp.o -c /Users/kcedra/ft_containers/vector_tests.cpp
+CMakeFiles/ft_containers.dir/srcs/vector_tests.cpp.o: CMakeFiles/ft_containers.dir/flags.make
+CMakeFiles/ft_containers.dir/srcs/vector_tests.cpp.o: ../srcs/vector_tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kcedra/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ft_containers.dir/srcs/vector_tests.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/srcs/vector_tests.cpp.o -c /Users/kcedra/ft_containers/srcs/vector_tests.cpp
 
-CMakeFiles/ft_containers.dir/vector_tests.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/vector_tests.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kcedra/ft_containers/vector_tests.cpp > CMakeFiles/ft_containers.dir/vector_tests.cpp.i
+CMakeFiles/ft_containers.dir/srcs/vector_tests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/srcs/vector_tests.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kcedra/ft_containers/srcs/vector_tests.cpp > CMakeFiles/ft_containers.dir/srcs/vector_tests.cpp.i
 
-CMakeFiles/ft_containers.dir/vector_tests.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/vector_tests.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kcedra/ft_containers/vector_tests.cpp -o CMakeFiles/ft_containers.dir/vector_tests.cpp.s
+CMakeFiles/ft_containers.dir/srcs/vector_tests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/srcs/vector_tests.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kcedra/ft_containers/srcs/vector_tests.cpp -o CMakeFiles/ft_containers.dir/srcs/vector_tests.cpp.s
 
-CMakeFiles/ft_containers.dir/queue_tests.cpp.o: CMakeFiles/ft_containers.dir/flags.make
-CMakeFiles/ft_containers.dir/queue_tests.cpp.o: ../queue_tests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kcedra/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ft_containers.dir/queue_tests.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/queue_tests.cpp.o -c /Users/kcedra/ft_containers/queue_tests.cpp
+CMakeFiles/ft_containers.dir/srcs/queue_tests.cpp.o: CMakeFiles/ft_containers.dir/flags.make
+CMakeFiles/ft_containers.dir/srcs/queue_tests.cpp.o: ../srcs/queue_tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kcedra/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ft_containers.dir/srcs/queue_tests.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/srcs/queue_tests.cpp.o -c /Users/kcedra/ft_containers/srcs/queue_tests.cpp
 
-CMakeFiles/ft_containers.dir/queue_tests.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/queue_tests.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kcedra/ft_containers/queue_tests.cpp > CMakeFiles/ft_containers.dir/queue_tests.cpp.i
+CMakeFiles/ft_containers.dir/srcs/queue_tests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/srcs/queue_tests.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kcedra/ft_containers/srcs/queue_tests.cpp > CMakeFiles/ft_containers.dir/srcs/queue_tests.cpp.i
 
-CMakeFiles/ft_containers.dir/queue_tests.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/queue_tests.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kcedra/ft_containers/queue_tests.cpp -o CMakeFiles/ft_containers.dir/queue_tests.cpp.s
+CMakeFiles/ft_containers.dir/srcs/queue_tests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/srcs/queue_tests.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kcedra/ft_containers/srcs/queue_tests.cpp -o CMakeFiles/ft_containers.dir/srcs/queue_tests.cpp.s
 
-CMakeFiles/ft_containers.dir/stack_tests.cpp.o: CMakeFiles/ft_containers.dir/flags.make
-CMakeFiles/ft_containers.dir/stack_tests.cpp.o: ../stack_tests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kcedra/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ft_containers.dir/stack_tests.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/stack_tests.cpp.o -c /Users/kcedra/ft_containers/stack_tests.cpp
+CMakeFiles/ft_containers.dir/srcs/stack_tests.cpp.o: CMakeFiles/ft_containers.dir/flags.make
+CMakeFiles/ft_containers.dir/srcs/stack_tests.cpp.o: ../srcs/stack_tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kcedra/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ft_containers.dir/srcs/stack_tests.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/srcs/stack_tests.cpp.o -c /Users/kcedra/ft_containers/srcs/stack_tests.cpp
 
-CMakeFiles/ft_containers.dir/stack_tests.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/stack_tests.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kcedra/ft_containers/stack_tests.cpp > CMakeFiles/ft_containers.dir/stack_tests.cpp.i
+CMakeFiles/ft_containers.dir/srcs/stack_tests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/srcs/stack_tests.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kcedra/ft_containers/srcs/stack_tests.cpp > CMakeFiles/ft_containers.dir/srcs/stack_tests.cpp.i
 
-CMakeFiles/ft_containers.dir/stack_tests.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/stack_tests.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kcedra/ft_containers/stack_tests.cpp -o CMakeFiles/ft_containers.dir/stack_tests.cpp.s
+CMakeFiles/ft_containers.dir/srcs/stack_tests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/srcs/stack_tests.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kcedra/ft_containers/srcs/stack_tests.cpp -o CMakeFiles/ft_containers.dir/srcs/stack_tests.cpp.s
 
-CMakeFiles/ft_containers.dir/list_tests.cpp.o: CMakeFiles/ft_containers.dir/flags.make
-CMakeFiles/ft_containers.dir/list_tests.cpp.o: ../list_tests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kcedra/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ft_containers.dir/list_tests.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/list_tests.cpp.o -c /Users/kcedra/ft_containers/list_tests.cpp
+CMakeFiles/ft_containers.dir/srcs/list_tests.cpp.o: CMakeFiles/ft_containers.dir/flags.make
+CMakeFiles/ft_containers.dir/srcs/list_tests.cpp.o: ../srcs/list_tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kcedra/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ft_containers.dir/srcs/list_tests.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/srcs/list_tests.cpp.o -c /Users/kcedra/ft_containers/srcs/list_tests.cpp
 
-CMakeFiles/ft_containers.dir/list_tests.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/list_tests.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kcedra/ft_containers/list_tests.cpp > CMakeFiles/ft_containers.dir/list_tests.cpp.i
+CMakeFiles/ft_containers.dir/srcs/list_tests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/srcs/list_tests.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kcedra/ft_containers/srcs/list_tests.cpp > CMakeFiles/ft_containers.dir/srcs/list_tests.cpp.i
 
-CMakeFiles/ft_containers.dir/list_tests.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/list_tests.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kcedra/ft_containers/list_tests.cpp -o CMakeFiles/ft_containers.dir/list_tests.cpp.s
+CMakeFiles/ft_containers.dir/srcs/list_tests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/srcs/list_tests.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kcedra/ft_containers/srcs/list_tests.cpp -o CMakeFiles/ft_containers.dir/srcs/list_tests.cpp.s
 
-CMakeFiles/ft_containers.dir/map_tests.cpp.o: CMakeFiles/ft_containers.dir/flags.make
-CMakeFiles/ft_containers.dir/map_tests.cpp.o: ../map_tests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kcedra/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ft_containers.dir/map_tests.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/map_tests.cpp.o -c /Users/kcedra/ft_containers/map_tests.cpp
+CMakeFiles/ft_containers.dir/srcs/map_tests.cpp.o: CMakeFiles/ft_containers.dir/flags.make
+CMakeFiles/ft_containers.dir/srcs/map_tests.cpp.o: ../srcs/map_tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kcedra/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ft_containers.dir/srcs/map_tests.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ft_containers.dir/srcs/map_tests.cpp.o -c /Users/kcedra/ft_containers/srcs/map_tests.cpp
 
-CMakeFiles/ft_containers.dir/map_tests.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/map_tests.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kcedra/ft_containers/map_tests.cpp > CMakeFiles/ft_containers.dir/map_tests.cpp.i
+CMakeFiles/ft_containers.dir/srcs/map_tests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ft_containers.dir/srcs/map_tests.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kcedra/ft_containers/srcs/map_tests.cpp > CMakeFiles/ft_containers.dir/srcs/map_tests.cpp.i
 
-CMakeFiles/ft_containers.dir/map_tests.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/map_tests.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kcedra/ft_containers/map_tests.cpp -o CMakeFiles/ft_containers.dir/map_tests.cpp.s
+CMakeFiles/ft_containers.dir/srcs/map_tests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ft_containers.dir/srcs/map_tests.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kcedra/ft_containers/srcs/map_tests.cpp -o CMakeFiles/ft_containers.dir/srcs/map_tests.cpp.s
 
 # Object files for target ft_containers
 ft_containers_OBJECTS = \
-"CMakeFiles/ft_containers.dir/main.cpp.o" \
-"CMakeFiles/ft_containers.dir/vector_tests.cpp.o" \
-"CMakeFiles/ft_containers.dir/queue_tests.cpp.o" \
-"CMakeFiles/ft_containers.dir/stack_tests.cpp.o" \
-"CMakeFiles/ft_containers.dir/list_tests.cpp.o" \
-"CMakeFiles/ft_containers.dir/map_tests.cpp.o"
+"CMakeFiles/ft_containers.dir/srcs/main.cpp.o" \
+"CMakeFiles/ft_containers.dir/srcs/vector_tests.cpp.o" \
+"CMakeFiles/ft_containers.dir/srcs/queue_tests.cpp.o" \
+"CMakeFiles/ft_containers.dir/srcs/stack_tests.cpp.o" \
+"CMakeFiles/ft_containers.dir/srcs/list_tests.cpp.o" \
+"CMakeFiles/ft_containers.dir/srcs/map_tests.cpp.o"
 
 # External object files for target ft_containers
 ft_containers_EXTERNAL_OBJECTS =
 
-ft_containers: CMakeFiles/ft_containers.dir/main.cpp.o
-ft_containers: CMakeFiles/ft_containers.dir/vector_tests.cpp.o
-ft_containers: CMakeFiles/ft_containers.dir/queue_tests.cpp.o
-ft_containers: CMakeFiles/ft_containers.dir/stack_tests.cpp.o
-ft_containers: CMakeFiles/ft_containers.dir/list_tests.cpp.o
-ft_containers: CMakeFiles/ft_containers.dir/map_tests.cpp.o
+ft_containers: CMakeFiles/ft_containers.dir/srcs/main.cpp.o
+ft_containers: CMakeFiles/ft_containers.dir/srcs/vector_tests.cpp.o
+ft_containers: CMakeFiles/ft_containers.dir/srcs/queue_tests.cpp.o
+ft_containers: CMakeFiles/ft_containers.dir/srcs/stack_tests.cpp.o
+ft_containers: CMakeFiles/ft_containers.dir/srcs/list_tests.cpp.o
+ft_containers: CMakeFiles/ft_containers.dir/srcs/map_tests.cpp.o
 ft_containers: CMakeFiles/ft_containers.dir/build.make
 ft_containers: CMakeFiles/ft_containers.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kcedra/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ft_containers"

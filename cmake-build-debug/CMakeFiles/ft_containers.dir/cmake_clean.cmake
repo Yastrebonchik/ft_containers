@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ft_containers.dir/list_tests.cpp.o"
-  "CMakeFiles/ft_containers.dir/main.cpp.o"
-  "CMakeFiles/ft_containers.dir/map_tests.cpp.o"
-  "CMakeFiles/ft_containers.dir/queue_tests.cpp.o"
-  "CMakeFiles/ft_containers.dir/stack_tests.cpp.o"
-  "CMakeFiles/ft_containers.dir/vector_tests.cpp.o"
+  "CMakeFiles/ft_containers.dir/srcs/list_tests.cpp.o"
+  "CMakeFiles/ft_containers.dir/srcs/main.cpp.o"
+  "CMakeFiles/ft_containers.dir/srcs/map_tests.cpp.o"
+  "CMakeFiles/ft_containers.dir/srcs/queue_tests.cpp.o"
+  "CMakeFiles/ft_containers.dir/srcs/stack_tests.cpp.o"
+  "CMakeFiles/ft_containers.dir/srcs/vector_tests.cpp.o"
   "ft_containers"
   "ft_containers.pdb"
 )

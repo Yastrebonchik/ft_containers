@@ -142,167 +142,167 @@ ft_containers/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/build
 .PHONY : ft_containers/fast
 
-list_tests.o: list_tests.cpp.o
+srcs/list_tests.o: srcs/list_tests.cpp.o
 
-.PHONY : list_tests.o
-
-# target to build an object file
-list_tests.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/list_tests.cpp.o
-.PHONY : list_tests.cpp.o
-
-list_tests.i: list_tests.cpp.i
-
-.PHONY : list_tests.i
-
-# target to preprocess a source file
-list_tests.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/list_tests.cpp.i
-.PHONY : list_tests.cpp.i
-
-list_tests.s: list_tests.cpp.s
-
-.PHONY : list_tests.s
-
-# target to generate assembly for a file
-list_tests.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/list_tests.cpp.s
-.PHONY : list_tests.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
+.PHONY : srcs/list_tests.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/main.cpp.o
-.PHONY : main.cpp.o
+srcs/list_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/list_tests.cpp.o
+.PHONY : srcs/list_tests.cpp.o
 
-main.i: main.cpp.i
+srcs/list_tests.i: srcs/list_tests.cpp.i
 
-.PHONY : main.i
+.PHONY : srcs/list_tests.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/main.cpp.i
-.PHONY : main.cpp.i
+srcs/list_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/list_tests.cpp.i
+.PHONY : srcs/list_tests.cpp.i
 
-main.s: main.cpp.s
+srcs/list_tests.s: srcs/list_tests.cpp.s
 
-.PHONY : main.s
+.PHONY : srcs/list_tests.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/main.cpp.s
-.PHONY : main.cpp.s
+srcs/list_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/list_tests.cpp.s
+.PHONY : srcs/list_tests.cpp.s
 
-map_tests.o: map_tests.cpp.o
+srcs/main.o: srcs/main.cpp.o
 
-.PHONY : map_tests.o
+.PHONY : srcs/main.o
 
 # target to build an object file
-map_tests.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/map_tests.cpp.o
-.PHONY : map_tests.cpp.o
+srcs/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/main.cpp.o
+.PHONY : srcs/main.cpp.o
 
-map_tests.i: map_tests.cpp.i
+srcs/main.i: srcs/main.cpp.i
 
-.PHONY : map_tests.i
+.PHONY : srcs/main.i
 
 # target to preprocess a source file
-map_tests.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/map_tests.cpp.i
-.PHONY : map_tests.cpp.i
+srcs/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/main.cpp.i
+.PHONY : srcs/main.cpp.i
 
-map_tests.s: map_tests.cpp.s
+srcs/main.s: srcs/main.cpp.s
 
-.PHONY : map_tests.s
+.PHONY : srcs/main.s
 
 # target to generate assembly for a file
-map_tests.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/map_tests.cpp.s
-.PHONY : map_tests.cpp.s
+srcs/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/main.cpp.s
+.PHONY : srcs/main.cpp.s
 
-queue_tests.o: queue_tests.cpp.o
+srcs/map_tests.o: srcs/map_tests.cpp.o
 
-.PHONY : queue_tests.o
+.PHONY : srcs/map_tests.o
 
 # target to build an object file
-queue_tests.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/queue_tests.cpp.o
-.PHONY : queue_tests.cpp.o
+srcs/map_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/map_tests.cpp.o
+.PHONY : srcs/map_tests.cpp.o
 
-queue_tests.i: queue_tests.cpp.i
+srcs/map_tests.i: srcs/map_tests.cpp.i
 
-.PHONY : queue_tests.i
+.PHONY : srcs/map_tests.i
 
 # target to preprocess a source file
-queue_tests.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/queue_tests.cpp.i
-.PHONY : queue_tests.cpp.i
+srcs/map_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/map_tests.cpp.i
+.PHONY : srcs/map_tests.cpp.i
 
-queue_tests.s: queue_tests.cpp.s
+srcs/map_tests.s: srcs/map_tests.cpp.s
 
-.PHONY : queue_tests.s
+.PHONY : srcs/map_tests.s
 
 # target to generate assembly for a file
-queue_tests.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/queue_tests.cpp.s
-.PHONY : queue_tests.cpp.s
+srcs/map_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/map_tests.cpp.s
+.PHONY : srcs/map_tests.cpp.s
 
-stack_tests.o: stack_tests.cpp.o
+srcs/queue_tests.o: srcs/queue_tests.cpp.o
 
-.PHONY : stack_tests.o
+.PHONY : srcs/queue_tests.o
 
 # target to build an object file
-stack_tests.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/stack_tests.cpp.o
-.PHONY : stack_tests.cpp.o
+srcs/queue_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/queue_tests.cpp.o
+.PHONY : srcs/queue_tests.cpp.o
 
-stack_tests.i: stack_tests.cpp.i
+srcs/queue_tests.i: srcs/queue_tests.cpp.i
 
-.PHONY : stack_tests.i
+.PHONY : srcs/queue_tests.i
 
 # target to preprocess a source file
-stack_tests.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/stack_tests.cpp.i
-.PHONY : stack_tests.cpp.i
+srcs/queue_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/queue_tests.cpp.i
+.PHONY : srcs/queue_tests.cpp.i
 
-stack_tests.s: stack_tests.cpp.s
+srcs/queue_tests.s: srcs/queue_tests.cpp.s
 
-.PHONY : stack_tests.s
+.PHONY : srcs/queue_tests.s
 
 # target to generate assembly for a file
-stack_tests.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/stack_tests.cpp.s
-.PHONY : stack_tests.cpp.s
+srcs/queue_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/queue_tests.cpp.s
+.PHONY : srcs/queue_tests.cpp.s
 
-vector_tests.o: vector_tests.cpp.o
+srcs/stack_tests.o: srcs/stack_tests.cpp.o
 
-.PHONY : vector_tests.o
+.PHONY : srcs/stack_tests.o
 
 # target to build an object file
-vector_tests.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/vector_tests.cpp.o
-.PHONY : vector_tests.cpp.o
+srcs/stack_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/stack_tests.cpp.o
+.PHONY : srcs/stack_tests.cpp.o
 
-vector_tests.i: vector_tests.cpp.i
+srcs/stack_tests.i: srcs/stack_tests.cpp.i
 
-.PHONY : vector_tests.i
+.PHONY : srcs/stack_tests.i
 
 # target to preprocess a source file
-vector_tests.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/vector_tests.cpp.i
-.PHONY : vector_tests.cpp.i
+srcs/stack_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/stack_tests.cpp.i
+.PHONY : srcs/stack_tests.cpp.i
 
-vector_tests.s: vector_tests.cpp.s
+srcs/stack_tests.s: srcs/stack_tests.cpp.s
 
-.PHONY : vector_tests.s
+.PHONY : srcs/stack_tests.s
 
 # target to generate assembly for a file
-vector_tests.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/vector_tests.cpp.s
-.PHONY : vector_tests.cpp.s
+srcs/stack_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/stack_tests.cpp.s
+.PHONY : srcs/stack_tests.cpp.s
+
+srcs/vector_tests.o: srcs/vector_tests.cpp.o
+
+.PHONY : srcs/vector_tests.o
+
+# target to build an object file
+srcs/vector_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/vector_tests.cpp.o
+.PHONY : srcs/vector_tests.cpp.o
+
+srcs/vector_tests.i: srcs/vector_tests.cpp.i
+
+.PHONY : srcs/vector_tests.i
+
+# target to preprocess a source file
+srcs/vector_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/vector_tests.cpp.i
+.PHONY : srcs/vector_tests.cpp.i
+
+srcs/vector_tests.s: srcs/vector_tests.cpp.s
+
+.PHONY : srcs/vector_tests.s
+
+# target to generate assembly for a file
+srcs/vector_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/srcs/vector_tests.cpp.s
+.PHONY : srcs/vector_tests.cpp.s
 
 # Help Target
 help:
@@ -313,24 +313,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ft_containers"
-	@echo "... list_tests.o"
-	@echo "... list_tests.i"
-	@echo "... list_tests.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... map_tests.o"
-	@echo "... map_tests.i"
-	@echo "... map_tests.s"
-	@echo "... queue_tests.o"
-	@echo "... queue_tests.i"
-	@echo "... queue_tests.s"
-	@echo "... stack_tests.o"
-	@echo "... stack_tests.i"
-	@echo "... stack_tests.s"
-	@echo "... vector_tests.o"
-	@echo "... vector_tests.i"
-	@echo "... vector_tests.s"
+	@echo "... srcs/list_tests.o"
+	@echo "... srcs/list_tests.i"
+	@echo "... srcs/list_tests.s"
+	@echo "... srcs/main.o"
+	@echo "... srcs/main.i"
+	@echo "... srcs/main.s"
+	@echo "... srcs/map_tests.o"
+	@echo "... srcs/map_tests.i"
+	@echo "... srcs/map_tests.s"
+	@echo "... srcs/queue_tests.o"
+	@echo "... srcs/queue_tests.i"
+	@echo "... srcs/queue_tests.s"
+	@echo "... srcs/stack_tests.o"
+	@echo "... srcs/stack_tests.i"
+	@echo "... srcs/stack_tests.s"
+	@echo "... srcs/vector_tests.o"
+	@echo "... srcs/vector_tests.i"
+	@echo "... srcs/vector_tests.s"
 .PHONY : help
 
 

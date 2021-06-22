@@ -6,65 +6,45 @@
 
 #IncludeRegexTransform: 
 
-/Users/kcedra/ft_containers/algorithm.hpp
+../includes/algorithm.hpp
 
-/Users/kcedra/ft_containers/list.hpp
+../includes/list.hpp
 limits
 -
 algorithm.hpp
-/Users/kcedra/ft_containers/algorithm.hpp
+../includes/algorithm.hpp
 
-/Users/kcedra/ft_containers/list_tests.cpp
-list_tests.hpp
-/Users/kcedra/ft_containers/list_tests.hpp
-
-/Users/kcedra/ft_containers/list_tests.hpp
+../includes/list_tests.hpp
 test_headers.hpp
-/Users/kcedra/ft_containers/test_headers.hpp
+../includes/test_headers.hpp
 
-/Users/kcedra/ft_containers/main.cpp
-test_headers.hpp
-/Users/kcedra/ft_containers/test_headers.hpp
-
-/Users/kcedra/ft_containers/map.hpp
+../includes/map.hpp
 functional
 -
 utility
 -
 
-/Users/kcedra/ft_containers/map_tests.cpp
-map_tests.hpp
-/Users/kcedra/ft_containers/map_tests.hpp
-
-/Users/kcedra/ft_containers/map_tests.hpp
+../includes/map_tests.hpp
 test_headers.hpp
-/Users/kcedra/ft_containers/test_headers.hpp
+../includes/test_headers.hpp
 
-/Users/kcedra/ft_containers/queue.hpp
+../includes/queue.hpp
 vector.hpp
-/Users/kcedra/ft_containers/vector.hpp
+../includes/vector.hpp
 
-/Users/kcedra/ft_containers/queue_tests.cpp
-queue_tests.hpp
-/Users/kcedra/ft_containers/queue_tests.hpp
-
-/Users/kcedra/ft_containers/queue_tests.hpp
+../includes/queue_tests.hpp
 test_headers.hpp
-/Users/kcedra/ft_containers/test_headers.hpp
+../includes/test_headers.hpp
 
-/Users/kcedra/ft_containers/stack.hpp
+../includes/stack.hpp
 vector.hpp
-/Users/kcedra/ft_containers/vector.hpp
+../includes/vector.hpp
 
-/Users/kcedra/ft_containers/stack_tests.cpp
-stack_tests.hpp
-/Users/kcedra/ft_containers/stack_tests.hpp
-
-/Users/kcedra/ft_containers/stack_tests.hpp
+../includes/stack_tests.hpp
 test_headers.hpp
-/Users/kcedra/ft_containers/test_headers.hpp
+../includes/test_headers.hpp
 
-/Users/kcedra/ft_containers/test_headers.hpp
+../includes/test_headers.hpp
 iostream
 -
 list
@@ -82,45 +62,65 @@ cmath
 string
 -
 list.hpp
-/Users/kcedra/ft_containers/list.hpp
+../includes/list.hpp
 vector.hpp
-/Users/kcedra/ft_containers/vector.hpp
+../includes/vector.hpp
 queue.hpp
-/Users/kcedra/ft_containers/queue.hpp
+../includes/queue.hpp
 stack.hpp
-/Users/kcedra/ft_containers/stack.hpp
+../includes/stack.hpp
 map.hpp
-/Users/kcedra/ft_containers/map.hpp
+../includes/map.hpp
 list_tests.hpp
-/Users/kcedra/ft_containers/list_tests.hpp
+../includes/list_tests.hpp
 vector_tests.hpp
-/Users/kcedra/ft_containers/vector_tests.hpp
+../includes/vector_tests.hpp
 queue_tests.hpp
-/Users/kcedra/ft_containers/queue_tests.hpp
+../includes/queue_tests.hpp
 stack_tests.hpp
-/Users/kcedra/ft_containers/stack_tests.hpp
+../includes/stack_tests.hpp
 map_tests.hpp
-/Users/kcedra/ft_containers/map_tests.hpp
+../includes/map_tests.hpp
 vector.hpp
-/Users/kcedra/ft_containers/vector.hpp
+../includes/vector.hpp
 exception
 -
 
-/Users/kcedra/ft_containers/vector.hpp
+../includes/vector.hpp
 limits
 -
 algorithm.hpp
-/Users/kcedra/ft_containers/algorithm.hpp
+../includes/algorithm.hpp
 cmath
 -
 stdexcept
 -
 
-/Users/kcedra/ft_containers/vector_tests.cpp
-vector_tests.hpp
-/Users/kcedra/ft_containers/vector_tests.hpp
-
-/Users/kcedra/ft_containers/vector_tests.hpp
+../includes/vector_tests.hpp
 test_headers.hpp
-/Users/kcedra/ft_containers/test_headers.hpp
+../includes/test_headers.hpp
+
+/Users/kcedra/ft_containers/srcs/list_tests.cpp
+list_tests.hpp
+/Users/kcedra/ft_containers/srcs/list_tests.hpp
+
+/Users/kcedra/ft_containers/srcs/main.cpp
+test_headers.hpp
+/Users/kcedra/ft_containers/srcs/test_headers.hpp
+
+/Users/kcedra/ft_containers/srcs/map_tests.cpp
+map_tests.hpp
+/Users/kcedra/ft_containers/srcs/map_tests.hpp
+
+/Users/kcedra/ft_containers/srcs/queue_tests.cpp
+queue_tests.hpp
+/Users/kcedra/ft_containers/srcs/queue_tests.hpp
+
+/Users/kcedra/ft_containers/srcs/stack_tests.cpp
+stack_tests.hpp
+/Users/kcedra/ft_containers/srcs/stack_tests.hpp
+
+/Users/kcedra/ft_containers/srcs/vector_tests.cpp
+vector_tests.hpp
+/Users/kcedra/ft_containers/srcs/vector_tests.hpp
 
